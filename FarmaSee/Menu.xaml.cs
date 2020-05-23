@@ -17,7 +17,7 @@ namespace FarmaSee
     /// <summary>
     /// Interaction logic for Menu.xaml
     /// </summary>
-    public partial class Menu : Window
+    public partial class Menu : Page
     {
         public Menu()
         {

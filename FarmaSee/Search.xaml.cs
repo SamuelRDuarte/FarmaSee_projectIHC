@@ -17,7 +17,7 @@ namespace FarmaSee
     /// <summary>
     /// Interaction logic for Search.xaml
     /// </summary>
-    public partial class Search : Window
+    public partial class Search : Page
     {
         public Search()
         {

@@ -1,4 +1,4 @@
-﻿<Window x:Class="FarmaSee.Search"
+﻿<Page x:Class="FarmaSee.Search"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -41,4 +41,4 @@
 
         <Image Source="keyboard.png" Margin="0,421,0,0.4" Stretch="Fill"></Image>
     </Grid>
-</Window>
+</Page>
