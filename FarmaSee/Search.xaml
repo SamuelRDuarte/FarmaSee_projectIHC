@@ -10,9 +10,11 @@
     <Grid Background="#00517C">
         <Label Style="{StaticResource TitulolabelStyle}" Margin="152,10,152,0">Search</Label>
 
-        <TextBox Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search a farmacy..." Margin="78,88,70,0" />
+        <TextBox Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search a farmacy..." Margin="78,78,70,0" />
 
-        <ListBox Name="Histórico" Background="Transparent" Padding="0" Margin="0,148,0,0.4">
+        <Label Content="Please select a farmacy." Margin="10,118,270,593"/>
+
+        <ListBox Name="Farmacias" Background="Transparent" Margin="0,148,0,0.4">
             <ListBoxItem Style="{StaticResource SearchListItemStyle}" >
                 <StackPanel>
                     <Label Style="{StaticResource FarmaciaLabelStyle}">Farmácia Oudinot</Label>
