@@ -5,5 +5,5 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FarmaSee"
         mc:Ignorable="d"
-        Title="FarmaSee" Height="736" Width="414" Source="Login.xaml">
+        Title="FarmaSee" Height="736" Width="500" Source="Login.xaml">
 </NavigationWindow>

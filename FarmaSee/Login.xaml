@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:FarmaSee"
       mc:Ignorable="d" 
       d:DesignHeight="736" d:DesignWidth="414"
-      Title="Login">
+      Title="Login" Height="736" Width="414">
 
     <Grid Margin="10,0,10,10" >
         <!--<Grid.RowDefinitions>
@@ -20,11 +20,11 @@
                 <GradientStop Color="#00293F" Offset="1.0" />
             </LinearGradientBrush>
         </Grid.Background>
-        <Image Source="logo.png" HorizontalAlignment="Center" Height="226" Margin="87,79,85,0" VerticalAlignment="Top" Width="222"/>
-        <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="167" Margin="120,382,107,0"/>
-        <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="168" Margin="120,435,106,0"/>
-        <Button Content="Entrar" Style="{StaticResource ButtonLogin}" HorizontalAlignment="Center" Margin="123,537,103,0" VerticalAlignment="Top" Width="129" Height="42" RenderTransformOrigin="0.611,0.489"/>
-        <Label Content="Register" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="161,621,137,0" VerticalAlignment="Top" Width="96" FontSize="20" Foreground="#60973D"   RenderTransformOrigin="0.562,0.2"/>
+        <Image Source="logo.png" Height="226" Margin="86,79,86,0" VerticalAlignment="Top"/>
+        <TextBox Height="23" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Margin="114,379,114,0"/>
+        <TextBox Height="23" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Margin="114,437,114,0"/>
+        <Button Content="Entrar" Style="{StaticResource ButtonLogin}" Margin="132,537,132,0" VerticalAlignment="Top" Height="42" RenderTransformOrigin="0.611,0.489"/>
+        <Label Content="Register" HorizontalContentAlignment="Center" Margin="149,618,149,0" VerticalAlignment="Top" FontSize="20" Foreground="#60973D"   RenderTransformOrigin="0.562,0.2"/>
     </Grid>
 
 </Page>

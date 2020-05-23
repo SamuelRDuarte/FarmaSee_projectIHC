@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:FarmaSee"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <Style x:Key="ListItemStyle" TargetType="{x:Type ListBoxItem}">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
         <Style x:Key="ButtonLogin" TargetType="{x:Type Button}">
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="20"/>
