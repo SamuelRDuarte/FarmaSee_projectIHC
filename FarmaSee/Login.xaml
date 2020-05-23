@@ -8,12 +8,18 @@
       d:DesignHeight="736" d:DesignWidth="414"
       Title="Login">
 
-    <Grid Margin="10,0,10,10" Background="#00517C">
+    <Grid Margin="10,0,10,10" >
         <!--<Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>-->
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="#00517C" Offset="0.6" />
+                <GradientStop Color="#00293F" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
         <Image Source="logo.png" HorizontalAlignment="Center" Height="226" Margin="87,79,85,0" VerticalAlignment="Top" Width="222"/>
         <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="167" Margin="120,382,107,0"/>
         <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="168" Margin="120,435,106,0"/>
