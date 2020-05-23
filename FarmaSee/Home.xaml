@@ -21,11 +21,22 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Image Source="logo.png" HorizontalAlignment="Center" Height="226" Margin="604,205,-431.6,0" VerticalAlignment="Top" Width="222"/>
-        <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="167" Margin="604,451,-376.6,0"/>
+        <TextBox Template="{StaticResource SearchBoxTemplate}" HorizontalAlignment="Center" Height="35" TextWrapping="Wrap" Text=" Search.." FontSize="21" VerticalAlignment="Top" Width="261" Margin="70,205,63.4,0" Background="#00517C" Foreground="#A7A7A7" />
         <TextBox HorizontalAlignment="Center" Height="23" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="168" Margin="623,523,-396.6,0"/>
         <Button Content="Entrar" Style="{StaticResource ButtonLogin}" HorizontalAlignment="Center" Margin="729,657,-463.6,0" VerticalAlignment="Top" Width="129" Height="42" RenderTransformOrigin="0.611,0.489"/>
         <Label Content="Welcome" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="94,47,89.4,0" VerticalAlignment="Top" Width="211" FontSize="48" Foreground="#60973D"   RenderTransformOrigin="0.562,0.2" Height="66"/>
-        <Label Content="Search what you need" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="94,139,89.4,0" VerticalAlignment="Top" Width="211" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>
+        <Label Content="Search what you need" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="94,158,89.4,0" VerticalAlignment="Top" Width="211" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>
+        <Image Margin="298,210,71.4,492" Source="Lupa.png" Stretch="Fill"/>
+        <Label Content="OR" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="170,269,164.4,0" VerticalAlignment="Top" Width="60" FontSize="19" FontWeight="Bold" Foreground="#A7A7A7" RenderTransformOrigin="0.562,0.2" Height="35"/>
+        <TextBox Template="{StaticResource ResourceKey=SearchBoxTemplate}" HorizontalAlignment="Center" BorderThickness="0,0,0,1" Height="35" TextWrapping="Wrap" Text="Key" FontSize="18" VerticalAlignment="Top" Width="261" Margin="70,378,63.4,0" Background="#00517C" Foreground="#A7A7A7" />
+        <Label Content="Insert medical prescription code:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="60,330,49.4,0" VerticalAlignment="Top" Width="285" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>
+
+        <Line
+    X1="10" Y1="10"
+    X2="50" Y2="50"
+    Stroke="White"
+    StrokeThickness="20" />
+        
     </Grid>
 
 </Page>
