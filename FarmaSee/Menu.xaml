@@ -7,27 +7,28 @@
         mc:Ignorable="d"
         Title="Menu" Height="736" Width="414">
     <Grid Background="#00517C">
-        <Label Content="Menu" Style="{StaticResource TitulolabelStyle}" />
+        <Label Content="Menu" Style="{StaticResource TitulolabelStyle}" Margin="158,10,158,0" />
+        <Image Source="back_icon.png" Margin="10,10,350,645"/>
 
         <StackPanel Margin="0,75,0,0">
             <Button Style="{StaticResource MenuButtons}">
                 <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
                         <ColumnDefinition Width="200"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" HorizontalAlignment="Center">0</TextBlock>
-                    <TextBlock Grid.Column="1">Menu</TextBlock>
+                    <Image Source="home_icon.png" Width="20"></Image>
+                    <TextBlock Grid.Column="1">Home</TextBlock>
                 </Grid>
             </Button>
 
             <Button Style="{StaticResource MenuButtons}">
                 <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
                         <ColumnDefinition Width="200"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" HorizontalAlignment="Center">0</TextBlock>
+                    <Image Source="shop_icon.png" Width="20"></Image>
                     <TextBlock Grid.Column="1">Shopping</TextBlock>
                 </Grid>
             </Button>
@@ -35,10 +36,10 @@
             <Button Style="{StaticResource MenuButtons}">
                 <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
                         <ColumnDefinition Width="200"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" HorizontalAlignment="Center">0</TextBlock>
+                    <Image Source="history_icon.png" Width="20"></Image>
                     <TextBlock Grid.Column="1">History</TextBlock>
                 </Grid>
             </Button>
@@ -46,17 +47,17 @@
             <Button Style="{StaticResource MenuButtons}">
                 <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
                         <ColumnDefinition Width="200"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" HorizontalAlignment="Center">0</TextBlock>
+                    <Image Source="profile_icon.png" Width="20"></Image>
                     <TextBlock Grid.Column="1">Profile</TextBlock>
                 </Grid>
             </Button>
         </StackPanel>
 
         <Image Source="logo.png" HorizontalAlignment="Center" Height="176" Margin="90,431,90,0" VerticalAlignment="Top" Width="228"/>
-        <Button Content="Logout" Style="{StaticResource ButtonLogout}" HorizontalAlignment="Left" Margin="36,647,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Logout" Style="{StaticResource ButtonLogout}"/>
 
 
     </Grid>

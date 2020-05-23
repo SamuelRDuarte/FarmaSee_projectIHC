@@ -9,6 +9,12 @@
             <Setter Property="Height" Value="50"/>
             <Setter Property="Background" Value="White"/>
         </Style>
+
+        <Style TargetType="ListBoxItem" BasedOn="{StaticResource ListItemStyle}" x:Key="SearchListItemStyle">
+            <Setter Property="Margin" Value="0,2,0,0"/>
+            <Setter Property="Background" Value="#196289"/>
+            <Setter Property="Height" Value="60"/>
+        </Style>
         
         <Style x:Key="ButtonLogin" TargetType="{x:Type Button}">
             <Setter Property="Foreground" Value="White"/>
@@ -25,6 +31,10 @@
         </Style>
 
         <Style x:Key="ButtonLogout" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="85"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="VerticalAlignment" Value="Top"></Setter>
+            <Setter Property="Margin" Value="20,665,0,0"></Setter>
             <Setter Property="Foreground" Value="Red"/>
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="Template">
@@ -73,6 +83,25 @@
                 </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
+
+        <Style x:Key="SearchBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalAlignment" Value="Top"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="Height" Value="35"></Setter>
+            <Setter Property="Width" Value="260"></Setter>
+            <Setter Property="TextWrapping" Value="Wrap"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Background" Value="#00517C"></Setter>
+            <Setter Property="Foreground" Value="#A7A7A7"></Setter>
+        </Style>
+
+        <Style x:Key="FarmaciaLabelStyle" TargetType="{x:Type Label}">
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"></Setter>
+            <Setter Property="FontSize" Value="16"></Setter>
+        </Style>
         
     </Application.Resources>
 </Application>
