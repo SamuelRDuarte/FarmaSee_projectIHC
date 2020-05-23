@@ -18,9 +18,9 @@ namespace FarmaSee
     /// <summary>
     /// Interaction logic for Login.xaml
     /// </summary>
-    public partial class Login : Page
+    public partial class Home : Page
     {
-        public Login()
+        public Home()
         {
             InitializeComponent();
         }
