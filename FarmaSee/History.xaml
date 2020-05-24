@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:FarmaSee"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="History" Height="736" Width="414">
+      Title="History" Height="700" Width="414">
 
     <Grid Margin="10,0,10,10">
         <Grid.RowDefinitions>

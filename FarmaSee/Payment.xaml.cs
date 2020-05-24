@@ -17,7 +17,7 @@ namespace FarmaSee
     /// <summary>
     /// Interaction logic for Payment.xaml
     /// </summary>
-    public partial class Payment : Window
+    public partial class Payment : Page
     {
         public Payment()
         {

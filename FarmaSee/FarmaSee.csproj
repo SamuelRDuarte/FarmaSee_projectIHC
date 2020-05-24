@@ -145,5 +145,12 @@
   <ItemGroup>
     <Resource Include="payment_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="back_icon.png" />
+    <Resource Include="history_icon.png" />
+    <Resource Include="home_icon.png" />
+    <Resource Include="profile_icon.png" />
+    <Resource Include="shop_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

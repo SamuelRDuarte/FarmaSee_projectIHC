@@ -23,5 +23,10 @@ namespace FarmaSee
         {
             InitializeComponent();
         }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.GoBack();
+        }
     }
 }
