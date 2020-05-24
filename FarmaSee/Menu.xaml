@@ -13,10 +13,10 @@
             <RowDefinition Height="35*"/>
         </Grid.RowDefinitions>
         <Label Content="Menu" Style="{StaticResource TitulolabelStyle}" Margin="162,10,162,0" />
-        <Image Source="back_icon.png" Margin="10,10,350,365" MouseDown="Image_MouseDown"/>
+        <Image Source="back_icon.png" Margin="10,10,350,365" MouseUp="Image_MouseUp"/>
 
         <StackPanel Margin="0,75,0,0" Grid.RowSpan="2">
-            <Button Style="{StaticResource MenuButtons}">
+            <Button Style="{StaticResource MenuButtons}" Click="ButtonHome_Click">
                 <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="50"></ColumnDefinition>
@@ -27,7 +27,7 @@
                 </Grid>
             </Button>
 
-            <Button Style="{StaticResource MenuButtons}">
+            <Button Style="{StaticResource MenuButtons}" Click="ButtonShop_Click">
                 <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="50"></ColumnDefinition>
@@ -38,7 +38,7 @@
                 </Grid>
             </Button>
 
-            <Button Style="{StaticResource MenuButtons}">
+            <Button Style="{StaticResource MenuButtons}" Click="ButtonHistory_Click">
                 <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="50"></ColumnDefinition>
@@ -62,7 +62,7 @@
         </StackPanel>
 
         <Image Source="logo.png" HorizontalAlignment="Center" Height="176" Margin="93,431,93,0" VerticalAlignment="Top" Width="228" Grid.RowSpan="2"/>
-        <Button Content="Logout" Style="{StaticResource ButtonLogout}" Margin="20,209,0,0" Grid.Row="1"/>
+        <Button Content="Logout" Style="{StaticResource ButtonLogout}" Margin="20,209,0,0" Grid.Row="1" Click="ButtonLogOut_Click"/>
 
 
     </Grid>

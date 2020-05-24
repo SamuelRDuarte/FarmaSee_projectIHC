@@ -29,7 +29,7 @@ namespace FarmaSee
         {
             Home home = new Home();
             History his = new History();
-            this.NavigationService.Navigate(his);
+            this.NavigationService.Navigate(home);
         }
     }
 }

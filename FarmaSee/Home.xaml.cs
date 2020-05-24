@@ -48,5 +48,22 @@ namespace FarmaSee
             var bc = new BrushConverter();
             //GridMenu.Background = (Brush)bc.ConvertFrom("#00517C");
         }
+
+        private void ListViewItemHome_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new Home());
+        }
+
+        private void ListViewItemShop_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new Order());
+        }
+
+        private void ListViewItemHistory_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new History());
+        }
+
+
     }
 }

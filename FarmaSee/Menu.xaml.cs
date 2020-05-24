@@ -24,9 +24,33 @@ namespace FarmaSee
             InitializeComponent();
         }
 
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
             this.NavigationService.GoBack();
+        }
+
+        private void ButtonHome_Click(object sender, RoutedEventArgs e)
+        {
+            Home home = new Home();
+            this.NavigationService.Navigate(home);
+        }
+
+        private void ButtonShop_Click(object sender, RoutedEventArgs e)
+        {
+            Order order = new Order();
+            this.NavigationService.Navigate(order);
+        }
+
+        private void ButtonHistory_Click(object sender, RoutedEventArgs e)
+        {
+            History his = new History();
+            this.NavigationService.Navigate(his);
+        }
+
+        private void ButtonLogOut_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            this.NavigationService.Navigate(login);
         }
     }
 }
