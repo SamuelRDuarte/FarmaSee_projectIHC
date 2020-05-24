@@ -24,5 +24,29 @@ namespace FarmaSee
         {
             InitializeComponent();
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonOpenMenu.Visibility = Visibility.Collapsed;
+            ButtonCloseMenu.Visibility = Visibility.Visible;
+            Lista.Visibility = Visibility.Visible;
+            var bc = new BrushConverter();
+            //GridMenu.Background = (Brush)bc.ConvertFrom("#0773AD");
+        }
+
+        private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
+        {
+            ButtonOpenMenu.Visibility = Visibility.Visible;
+            ButtonCloseMenu.Visibility = Visibility.Collapsed;
+            Lista.Visibility= Visibility.Collapsed;
+            MainGrid.Opacity = 1;
+            var bc = new BrushConverter();
+            //GridMenu.Background = (Brush)bc.ConvertFrom("#00517C");
+        }
     }
 }
