@@ -52,5 +52,11 @@ namespace FarmaSee
             Login login = new Login();
             this.NavigationService.Navigate(login);
         }
+
+        private void ButtonPerfil_Click(object sender, RoutedEventArgs e)
+        {
+            Perfil per = new Perfil();
+            this.NavigationService.Navigate(per);
+        }
     }
 }

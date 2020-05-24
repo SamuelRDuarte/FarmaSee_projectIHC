@@ -1,0 +1,57 @@
+﻿<Page x:Class="FarmaSee.Perfil"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FarmaSee"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Perfil" Height="700" Width="414">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="#00517C" Offset="0.6" />
+                <GradientStop Color="#00293F" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="153*"/>
+            <RowDefinition Height="197*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Profile" Style="{StaticResource TitulolabelStyle}" Margin="155,10,155,0" Height="50" HorizontalAlignment="Stretch" />
+        <Image Source="back_icon.png" Margin="10,10,350,243" MouseUp="Image_MouseUp"/>
+        <Image Margin="114,68" Source="profile-avatar-png-15.png" Stretch="Fill"/>
+        <Label Content="Username" Foreground="White" FontSize="20" FontWeight="DemiBold" Margin="157,246,157,24" RenderTransformOrigin="0.515,0.472"/>
+
+        <ListView Grid.Row="1" Background="Transparent" Height="250" BorderThickness="0">
+            <ListViewItem HorizontalAlignment="Stretch" Background="#00657C" Height="50"  >
+                <StackPanel Orientation="Horizontal" Width="398">
+                    <Label FontSize="18" FontWeight="DemiBold">Name: </Label>
+                    <Label FontSize="18">Joafsf</Label>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem Margin="0,10,0,0" HorizontalAlignment="Stretch" Background="#00657C" Height="50" Padding="5" >
+                <StackPanel Orientation="Horizontal" Width="398">
+                    <Label FontSize="18" FontWeight="DemiBold">Birthday:</Label>
+                    <Label FontSize="18">25/05/1888</Label>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem Margin="0,10,0,0" HorizontalAlignment="Stretch" Background="#00657C" Height="50" Padding="5" >
+                <StackPanel Orientation="Horizontal" Width="398">
+                    <Label FontSize="18" FontWeight="DemiBold">Email:</Label>
+                    <Label FontSize="18">tozedasquintas@ua.pt</Label>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem Margin="0,10,0,0" HorizontalAlignment="Stretch" Background="#00657C" Height="50" Padding="5" >
+                <StackPanel Orientation="Horizontal" Width="398">
+                    <Label FontSize="18" FontWeight="DemiBold">Telemovél:</Label>
+                    <Label FontSize="18">9677...</Label>
+                </StackPanel>
+            </ListViewItem>
+        </ListView>
+        
+        
+
+    </Grid>
+</Page>

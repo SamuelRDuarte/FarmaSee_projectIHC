@@ -74,7 +74,7 @@
                 <materialDesign:PackIcon Foreground="#A7A7A7" Kind="Menu"/>
             </Button>
             <ListView x:Name="Lista" Visibility="Collapsed" BorderBrush="White" BorderThickness="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#00517C" Margin="0,137,0,0.4" SelectionChanged="ListView_SelectionChanged" Background="#196289" HorizontalAlignment="Left" Width="82">
-                <ListViewItem Height="42" MouseUp="ListViewItemHome_MouseUp">
+                <ListViewItem Height="42">
                     <StackPanel Orientation="Horizontal">
                         <Button Background="#196289" BorderThickness="0" Click="ButtonHome_Click">
                             <Grid HorizontalAlignment="Stretch">
@@ -88,7 +88,7 @@
                         </Button>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem Height="42" MouseUp="ListViewItemShop_MouseUp">
+                <ListViewItem Height="42">
                     <StackPanel Orientation="Horizontal">
                         <Button Background="#196289" BorderThickness="0" Click="ButtonShop_Click">
                             <Grid HorizontalAlignment="Stretch">
@@ -102,7 +102,7 @@
                         </Button>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem Height="42" MouseUp="ListViewItemHistory_MouseUp">
+                <ListViewItem Height="42" >
                     <StackPanel Orientation="Horizontal">
                         <Button Background="#196289" BorderThickness="0" Click="ButtonHistory_Click">
                             <Grid HorizontalAlignment="Stretch">
