@@ -33,17 +33,17 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Content="At home" Style="{StaticResource PaymentButtonStyle}"></Button>
-                    <Button Grid.Column="1" Content="Pick up" Style="{StaticResource PaymentButtonStyle}"></Button>
+                    <Button x:Name="atHomeBt" Grid.Column="0" Content="At home" Style="{StaticResource PaymentButtonStyle}"></Button>
+                    <Button x:Name="pickupBt" Grid.Column="1" Content="Pick up" Style="{StaticResource PaymentButtonStyle}"></Button>
                 </Grid>
             </StackPanel>
 
             <StackPanel Grid.Row="2" Background="#196289" Margin="0,0,0,10">
-                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Image Width="20" Height="20" Source="payment_icon.png"></Image>
-                    <Label Content="Payment" Foreground="White" FontWeight="DemiBold" FontSize="20" Margin="0,0,0,20" />
-                </StackPanel>
-                
+                <WrapPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,0,0,20">
+                    <Image Width="20" Height="20" Source="payment_icon.png"/>
+                    <Label Content="Payment" Foreground="White" FontWeight="DemiBold" FontSize="20" />
+                </WrapPanel>
+
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
