@@ -7,7 +7,7 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="FarmaSee.Home"
       mc:Ignorable="d" 
       d:DesignHeight="736" d:DesignWidth="414"
-      Title="Login">
+      Title="Home">
     <Page.Resources>
         <Storyboard x:Key="MenuOpen">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -53,7 +53,7 @@
         <Label Content="OR" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="170,249,164,0" VerticalAlignment="Top" Width="60" FontSize="19" FontWeight="Bold" Foreground="#A7A7A7" RenderTransformOrigin="0.562,0.2" Height="35"/>
         <TextBox Template="{StaticResource ResourceKey=SearchBoxTemplate}" HorizontalAlignment="Center" BorderThickness="0,0,0,1" Height="35" TextWrapping="Wrap" Text="Key" FontSize="18" VerticalAlignment="Top" Width="261" Margin="70,356,63,0" Background="#00517C" Foreground="#A7A7A7" />
         <Label Content="Insert medical prescription code:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="60,308,49,0" VerticalAlignment="Top" Width="285" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>
-        <Border BorderBrush="#60973D" BorderThickness="0,0,0,1" HorizontalAlignment="Center" Height="100" Margin="117,417,0,0" VerticalAlignment="Top" Width="157" />
+        <Border BorderBrush="#60973D" BorderThickness="0,0,0,1" HorizontalAlignment="Center" Height="100" Margin="117,417,120.4,0" VerticalAlignment="Top" Width="157" />
         <Border HorizontalAlignment="Center" BorderBrush="#60973D" BorderThickness="0,0,0,1"  Height="48" Margin="117,598,120.4,0" VerticalAlignment="Top" Width="157" >
             <Label Content="Pending Pick-Ups:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,10,-3.2,-0.8" VerticalAlignment="Top" Width="160" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="38"/>
         </Border>
