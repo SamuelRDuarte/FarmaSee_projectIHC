@@ -64,6 +64,39 @@ namespace FarmaSee
             this.NavigationService.Navigate(new History());
         }
 
+        private void ButtonProfile_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
+
+        private void ButtonHistory_Click(object sender, RoutedEventArgs e)
+        {
+            History his = new History();
+            this.NavigationService.Navigate(his);
+        }
+
+        private void ButtonShop_Click(object sender, RoutedEventArgs e)
+        {
+            Order order = new Order();
+            this.NavigationService.Navigate(order);
+        }
+
+        private void ButtonHome_Click(object sender, RoutedEventArgs e)
+        {
+            Home home = new Home();
+            this.NavigationService.Navigate(home);
+        }
+
+        private void ButtonSearch_Click(object sender, RoutedEventArgs e)
+        {
+            Order order = new Order();
+            this.NavigationService.Navigate(order);
+        }
+
+        private void ButtonKeySearch_Click(object sender, RoutedEventArgs e)
+        {
+            Payment payment = new Payment();
+            this.NavigationService.Navigate(payment);
+        }
     }
 }
