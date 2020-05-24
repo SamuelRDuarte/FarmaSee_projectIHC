@@ -70,7 +70,7 @@
             </Setter>
         </Style>
 
-        <Style x:Key="PaymentButtonStyle" TargetType="{x:Type RadioButton}">
+        <Style x:Key="PaymentButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="Width" Value="125"></Setter>
             <Setter Property="HorizontalAlignment" Value="Center"></Setter>
             <Setter Property="VerticalAlignment" Value="Top"></Setter>
@@ -91,6 +91,13 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
+        </Style>
+
+        <Style x:Key="RadioButtonStyle" TargetType="{x:Type RadioButton}">
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="FontWeight" Value="Medium"></Setter>
         </Style>
 
         <Style x:Key="PaymentButtonsStyle2" TargetType="{x:Type Button}">

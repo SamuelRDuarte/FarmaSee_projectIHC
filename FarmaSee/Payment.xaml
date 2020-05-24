@@ -18,11 +18,13 @@
 
             <StackPanel Grid.Row="0" Background="#196289" Margin="0,0,0,10">
                 <Label Content="Purchase List" HorizontalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" />
-                <ListBox x:Name="Medicines" Background="Transparent">
+                <ListBox x:Name="Medicines" Background="Transparent" Height="300">
                     <ListBoxItem Style="{StaticResource ListItemStyle}" Content="Medicine 1" />
                     <ListBoxItem Style="{StaticResource ListItemStyle}" Content="Medicine 2" />
                     <ListBoxItem Style="{StaticResource ListItemStyle}" Content="Medicine 3" />
                     <ListBoxItem Style="{StaticResource ListItemStyle}" Content="Medicine 4" />
+                    <ListBoxItem Style="{StaticResource ListItemStyle}" Content="Medicine 5" />
+                    <ListBoxItem Style="{StaticResource ListItemStyle}" Content="Medicine 6" />
                 </ListBox>
             </StackPanel>
 
@@ -33,8 +35,8 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="atHomeBt" Grid.Column="0" Content="At home" Style="{StaticResource PaymentButtonStyle}"></Button>
-                    <Button x:Name="pickupBt" Grid.Column="1" Content="Pick up" Style="{StaticResource PaymentButtonStyle}"></Button>
+                    <RadioButton x:Name="atHomeBt" GroupName="delivery" Grid.Column="0" Content="At home" Style="{StaticResource RadioButtonStyle}"></RadioButton>
+                    <RadioButton x:Name="pickupBt" GroupName="delivery" Grid.Column="1" Content="Pick up" Style="{StaticResource RadioButtonStyle}"></RadioButton>
                 </Grid>
             </StackPanel>
 
@@ -49,8 +51,8 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Content="MB Way" Style="{StaticResource PaymentButtonStyle}"></Button>
-                    <Button Grid.Column="1" Content="At delivery" Style="{StaticResource PaymentButtonStyle}"></Button>
+                    <RadioButton GroupName="payment" Grid.Column="0" Content="At home" Style="{StaticResource RadioButtonStyle}"></RadioButton>
+                    <RadioButton GroupName="payment" Grid.Column="1" Content="Pick up" Style="{StaticResource RadioButtonStyle}"></RadioButton>
                 </Grid>
             </StackPanel>
         </Grid>
