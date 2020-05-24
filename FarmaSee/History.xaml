@@ -25,12 +25,37 @@
 
         <Image Source="menu.png" Grid.Column="0" Margin="22,85,338,16"  Stretch="Fill" MouseDown="Image_MouseDown" />
 
-        <ListBox Name="Histórico" Grid.Row="1" Background="Transparent" Padding="2">
-            <ListBoxItem Style="{StaticResource ListItemStyle}" >Medicine 1</ListBoxItem>
-            <ListBoxItem Style="{StaticResource ListItemStyle}" >Medicine 2</ListBoxItem>
-            <ListBoxItem Style="{StaticResource ListItemStyle}" >Medicine 3</ListBoxItem>
-            <ListBoxItem Style="{StaticResource ListItemStyle}" >Medicine 4</ListBoxItem>
-            <ListBoxItem Style="{StaticResource ListItemStyle}" >Medicine 5</ListBoxItem>
+        <ListBox Name="Histórico" Grid.Row="1" Background="Transparent">
+            <ListBoxItem Style="{StaticResource ListItemStyle}" >
+                <StackPanel>
+                    <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 1</Label>
+                    <Label>sdfsdf</Label>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Style="{StaticResource ListItemStyle}" >
+                <StackPanel>
+                    <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 2</Label>
+                    <Label>sdfsdf</Label>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Style="{StaticResource ListItemStyle}" >
+                <StackPanel>
+                    <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 3</Label>
+                    <Label>sdfsdf</Label>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Style="{StaticResource ListItemStyle}" >
+                <StackPanel>
+                    <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 4</Label>
+                    <Label>sdfsdf</Label>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem Style="{StaticResource ListItemStyle}" >
+                <StackPanel>
+                    <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 5</Label>
+                    <Label>sdfsdf</Label>
+                </StackPanel>
+            </ListBoxItem>
         </ListBox>
     </Grid>
 </Page>
