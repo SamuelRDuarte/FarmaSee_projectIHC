@@ -130,6 +130,20 @@
                         </Button>
                     </StackPanel>
                 </ListViewItem>
+                <ListViewItem Height="42">
+                    <StackPanel Orientation="Horizontal">
+                        <Button Background="#196289" BorderThickness="0" Click="ButtonLogout_Click">
+                            <Grid HorizontalAlignment="Stretch">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="27"></ColumnDefinition>
+                                    <ColumnDefinition Width="45"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <materialDesign:PackIcon Kind="Logout" Width="25" Height="25" VerticalAlignment="Center" Margin="1" Foreground="#D3D3D3"/>
+                                <TextBlock Grid.Column="2" Text="Logout" VerticalAlignment="Center" Foreground="Red"/>
+                            </Grid>
+                        </Button>
+                    </StackPanel>
+                </ListViewItem>
             </ListView>
         </Grid>
         <Button Background="#00517C" BorderThickness="0" Click="ButtonSearch_Click" Margin="305,194,54.4,503">

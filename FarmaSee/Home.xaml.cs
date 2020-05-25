@@ -72,6 +72,11 @@ namespace FarmaSee
             this.NavigationService.Navigate(home);
         }
 
+        private void ButtonLogout_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Login());
+        }
+
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
             Order order = new Order();
@@ -113,5 +118,7 @@ namespace FarmaSee
         {
             key_input.Text = "Key...";
         }
+
+       
     }
 }
