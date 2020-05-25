@@ -28,5 +28,71 @@ namespace FarmaSee
         {
             NavigationService.GoBack();
         }
+
+        public void On_Click()
+        {
+
+            if (Farmacias.SelectedValue != null)
+            {
+                Order order = new Order();
+                this.NavigationService.Navigate(order);
+                StackPanel stack = (StackPanel) ((ListBoxItem)Farmacias.SelectedValue).Content;
+                order.selectFarmacia.Content = stack.Children.ToString();
+            }
+            else
+                MessageBox.Show("Selecione uma farmacia", "Erro", MessageBoxButton.OK);
+        }
+
+        
+            
+            
+
+        private void ListBoxItem1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (Farmacias.SelectedValue != null)
+            {
+                Order order = new Order();
+                this.NavigationService.Navigate(order);
+                order.selectFarmacia.Content = "Farmácia Oudinot";
+            }
+            else
+                MessageBox.Show("Selecione uma farmacia", "Erro", MessageBoxButton.OK);
+        }
+
+        private void ListBoxItem2_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (Farmacias.SelectedValue != null)
+            {
+                Order order = new Order();
+                this.NavigationService.Navigate(order);
+                order.selectFarmacia.Content = "Farmácia Central - Aveiro";
+            }
+            else
+                MessageBox.Show("Selecione uma farmacia", "Erro", MessageBoxButton.OK);
+        }
+
+        private void ListBoxItem3_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (Farmacias.SelectedValue != null)
+            {
+                Order order = new Order();
+                this.NavigationService.Navigate(order);
+                order.selectFarmacia.Content = "Farmácia Nova";
+            }
+            else
+                MessageBox.Show("Selecione uma farmacia", "Erro", MessageBoxButton.OK);
+        }
+
+        private void ListBoxItem4_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (Farmacias.SelectedValue != null)
+            {
+                Order order = new Order();
+                this.NavigationService.Navigate(order);
+                order.selectFarmacia.Content = "Farmácia Moderna";
+            }
+            else
+                MessageBox.Show("Selecione uma farmacia", "Erro", MessageBoxButton.OK);
+        }
     }
 }

@@ -16,25 +16,25 @@
         <Label Content="Please select a farmacy." Margin="10,118,270,593"/>
 
         <ListBox Name="Farmacias" Background="Transparent" Margin="0,148,0,0.4">
-            <ListBoxItem Style="{StaticResource SearchListItemStyle}" >
+            <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem1_MouseDoubleClick" >
                 <StackPanel>
                     <Label Style="{StaticResource FarmaciaLabelStyle}">Farmácia Oudinot</Label>
                     <Label FontSize="14">Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro</Label>
                 </StackPanel>
             </ListBoxItem>
-            <ListBoxItem Style="{StaticResource SearchListItemStyle}" >
+            <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem2_MouseDoubleClick" >
                 <StackPanel>
                     <Label Style="{StaticResource FarmaciaLabelStyle}">Farmácia Central - Aveiro</Label>
                     <Label FontSize="14">Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro</Label>
                 </StackPanel>
             </ListBoxItem>
-            <ListBoxItem Style="{StaticResource SearchListItemStyle}" >
+            <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem3_MouseDoubleClick" >
                 <StackPanel>
                     <Label Style="{StaticResource FarmaciaLabelStyle}">Farmácia Nova</Label>
                     <Label FontSize="14">Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro</Label>
                 </StackPanel>
             </ListBoxItem>
-            <ListBoxItem Style="{StaticResource SearchListItemStyle}" >
+            <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem4_MouseDoubleClick">
                 <StackPanel>
                     <Label Style="{StaticResource FarmaciaLabelStyle}">Farmácia Moderna</Label>
                     <Label FontSize="14">Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro</Label>
