@@ -23,7 +23,7 @@
         <Image Source="back_icon.png" Margin="10,10,350,243" MouseUp="Image_MouseUp"/>
         <!--<Image Margin="114,68" Source="profile-avatar-png-15.png" Stretch="Fill"/>-->
         <materialDesign:PackIcon Kind="PersonCircle" Width="162" Height="146" VerticalAlignment="Center" Margin="126,77,0,83.4" Foreground="#D3D3D3"/>
-        <Label Content="Username" Foreground="White" FontSize="20" FontWeight="DemiBold" Margin="157,256,157.4,14.4" RenderTransformOrigin="0.515,0.472"/>
+        <Label Content="Username" Foreground="White" FontSize="20" FontWeight="DemiBold" Margin="157,256,155.4,14.4" RenderTransformOrigin="0.515,0.472"/>
 
         <ListView Grid.Row="1" Background="Transparent" Height="250" BorderThickness="0">
             <ListViewItem HorizontalAlignment="Stretch" Background="#00657C" Height="50"  >

@@ -25,22 +25,125 @@
         <Image Source="menu.png" Grid.Column="0" Margin="20,32,340.4,68.8"  Stretch="Fill" MouseUp="Image_MouseUp" />
         <materialDesign:PackIcon Foreground="#A7A7A7" Kind="Search" Margin="351,32,0,0" Height="29" Width="25"/>
         <Label Grid.Row="0" Content="Best Sellers" FontSize="21" HorizontalContentAlignment="Center" Margin="5,90,269.4,561.4" RenderTransformOrigin="0.86,0.562" Grid.RowSpan="2" Foreground="#F9F9F9"/>
-        <Border BorderBrush="#60973D" BorderThickness="0,0,0,1" HorizontalAlignment="Center" Height="146" Margin="20,31.2,34.4,0" VerticalAlignment="Top" Width="340" Grid.Row="1" />
-        <Image Margin="20,59.2,203.4,422.4" Grid.Row="1" Source="voltaren.png" Stretch="Fill"/>
-        <Image Margin="247,44.2,51.4,413.4" Source="aspirina.jpg" Stretch="Fill" Grid.Row="1"/>
+        <Border BorderBrush="#60973D" BorderThickness="0,0,0,1" HorizontalAlignment="Center" Height="167" Margin="20,10.2,10.4,0" VerticalAlignment="Top" Width="364" Grid.Row="1" >
+            <ListView x:Name="Lista" Visibility="Visible"  BorderBrush="White" BorderThickness="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#00517C" Margin="3,4,0,4.8"  Background="#196289" HorizontalAlignment="Left" Width="361" RenderTransformOrigin="0.5,0.5">
+                <ListView.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180.011"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ListView.RenderTransform>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Width="323">
+                        <Grid HorizontalAlignment="Stretch" Width="323">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition Width="114.787"/>
+                                <ColumnDefinition Width="28.413"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Voltaren Gel" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#D3D3D3" Margin="0,15,0,15.4" Height="16" Width="170"/>
+                            <Image Source="voltaren.png" Stretch="Fill" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="77" Grid.Column="1" Margin="24,10,13.787,5.4"/>
+                            <CheckBox Grid.Column="2" Margin="7.6,15,4.2,15.4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Width="323">
+                        <Grid HorizontalAlignment="Stretch" Width="323">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition Width="114.787"/>
+                                <ColumnDefinition Width="28.413"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Aspirina C 500 mg" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#D3D3D3" Margin="0,15,0,15.4" Height="16" Width="170"/>
+                            <CheckBox Grid.Column="2" Margin="7.6,15,4.2,15.4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <Image Margin="36,7,28.4,6" Source="aspirina.jpg" Stretch="Fill" Grid.Column="1"/>
+                        </Grid>
+
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
+        </Border>
         <Label Grid.Row="1" Content="Medicine without need of prescription" FontSize="17" HorizontalContentAlignment="Center" Margin="10,201.2,81.4,321.4" RenderTransformOrigin="0.86,0.562" Foreground="#F9F9F9"/>
-        <Image Margin="20,251.2,249.4,194.4" Grid.Row="1" Source="fenistil-gel-300x300.jpg" Stretch="Fill"/>
-        <StackPanel Grid.Row="1" Background="#196289" Margin="0,404.2,0.4,34.4">
+        <StackPanel Grid.Row="1" Background="#196289" Margin="0,476.2,0.4,44.4">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
             </Grid>
-            <Label Content="Delivery" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" Margin="10,0,0,20" Width="90"/>
-            <materialDesign:PackIcon Foreground="#A7A7A7" Kind="Search" Margin="351,32,0,0" Height="29" Width="25"/>
+            <Label Content="Select pharmacy" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" Margin="10,0,0,20" Width="160"/>
+            <Button x:Name="ButtonOpenMenu" HorizontalAlignment="Right" Width="30" Height="30" Background="{x:Null}" Margin="0,-70,12,0" BorderBrush="{x:Null}" VerticalAlignment="Center" Click="ButtonPharmacy_Click">
+                <materialDesign:PackIcon Foreground="#A7A7A7" Kind="Pharmacy" Height="22" Width="23"/>
+            </Button>
 
         </StackPanel>
+        <Border BorderBrush="#60973D" BorderThickness="0,0,0,1" HorizontalAlignment="Center" Height="175" Margin="20,234.2,10.4,0" VerticalAlignment="Top" Width="364" Grid.Row="1" >
+            <ListView x:Name="Lista1" Visibility="Visible"  BorderBrush="White" BorderThickness="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#00517C" Margin="3,5,0,4.8"  Background="#196289" HorizontalAlignment="Left" Width="361" RenderTransformOrigin="0.5,0.5">
+                <ListView.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180.011"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ListView.RenderTransform>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Width="323">
+                        <Grid HorizontalAlignment="Stretch" Width="323">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition Width="114.787"/>
+                                <ColumnDefinition Width="28.413"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Fenistil Gel" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#D3D3D3" Margin="0,15,0,15.4" Height="16" Width="170"/>
+                            <Image Source="fenistil-gel-300x300.jpg" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill" Height="42"  Width="83" Grid.Column="1" Margin="18,0,13.4,4.4"/>
+                            <CheckBox Grid.Column="2" Margin="7.6,15,4.2,15.4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                        </Grid>
+
+                    </StackPanel>
+                </ListViewItem>
+
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Width="323">
+                        <Grid HorizontalAlignment="Stretch" Width="323">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition Width="114.787"/>
+                                <ColumnDefinition Width="28.413"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Fenistil Gel" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#D3D3D3" Margin="0,15,0,15.4" Height="16" Width="170"/>
+                            <Image Source="caixa-avamys-m.jpg" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="1" Margin="31,4,28.4,5"/>
+                            <CheckBox Grid.Column="2" Margin="7.6,15,4.2,15.4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+
+                    </StackPanel>
+                </ListViewItem>
+                <ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Width="323">
+                        <Grid HorizontalAlignment="Stretch" Width="323">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition Width="114.787"/>
+                                <ColumnDefinition Width="28.413"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Fenergen Pomada" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#D3D3D3" Margin="0,15,0,15.4" Height="16" Width="170"/>
+                            <Image Source="3d-fenergan.jpg" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="1" Margin="25,5,22.4,5" Height="46" Width="67"/>
+
+                            <CheckBox Grid.Column="2" Margin="7.6,15,4.2,15.4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                        </Grid>
+
+                    </StackPanel>
+                </ListViewItem>
+
+
+            </ListView>
+        </Border>
 
         <!--<ListBox Name="Histórico" Grid.Row="1" Background="Transparent"/>-->
     </Grid>
