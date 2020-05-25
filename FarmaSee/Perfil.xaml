@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:FarmaSee"
+      xmlns:local="clr-namespace:FarmaSee" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Perfil" Height="700" Width="414">
@@ -21,13 +21,14 @@
         </Grid.RowDefinitions>
         <Label Content="Profile" Style="{StaticResource TitulolabelStyle}" Margin="155,10,155,0" Height="50" HorizontalAlignment="Stretch" />
         <Image Source="back_icon.png" Margin="10,10,350,243" MouseUp="Image_MouseUp"/>
-        <Image Margin="114,68" Source="profile-avatar-png-15.png" Stretch="Fill"/>
-        <Label Content="Username" Foreground="White" FontSize="20" FontWeight="DemiBold" Margin="157,246,157,24" RenderTransformOrigin="0.515,0.472"/>
+        <!--<Image Margin="114,68" Source="profile-avatar-png-15.png" Stretch="Fill"/>-->
+        <materialDesign:PackIcon Kind="PersonCircle" Width="162" Height="146" VerticalAlignment="Center" Margin="126,77,0,83.4" Foreground="#D3D3D3"/>
+        <Label Content="Username" Foreground="White" FontSize="20" FontWeight="DemiBold" Margin="157,256,157.4,14.4" RenderTransformOrigin="0.515,0.472"/>
 
         <ListView Grid.Row="1" Background="Transparent" Height="250" BorderThickness="0">
             <ListViewItem HorizontalAlignment="Stretch" Background="#00657C" Height="50"  >
                 <StackPanel Orientation="Horizontal" Width="398">
-                    <Label FontSize="18" FontWeight="DemiBold">Name: </Label>
+                    <Label FontSize="18" FontWeight="DemiBold">Name:</Label>
                     <Label FontSize="18">Joafsf</Label>
                 </StackPanel>
             </ListViewItem>
@@ -50,8 +51,8 @@
                 </StackPanel>
             </ListViewItem>
         </ListView>
-        
-        
+
+
 
     </Grid>
 </Page>
