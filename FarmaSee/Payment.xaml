@@ -51,8 +51,8 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <RadioButton GroupName="payment" Grid.Column="0" Content="At home" Style="{StaticResource RadioButtonStyle}"></RadioButton>
-                    <RadioButton GroupName="payment" Grid.Column="1" Content="Pick up" Style="{StaticResource RadioButtonStyle}"></RadioButton>
+                    <RadioButton GroupName="payment" Grid.Column="0" Content="MB Way" Style="{StaticResource RadioButtonStyle}"></RadioButton>
+                    <RadioButton GroupName="payment" Grid.Column="1" Content="At delivery" Style="{StaticResource RadioButtonStyle}" Margin="65,0,26,0" VerticalAlignment="Top" Width="116"></RadioButton>
                 </Grid>
             </StackPanel>
         </Grid>
