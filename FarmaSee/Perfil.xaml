@@ -29,13 +29,13 @@
             <ListViewItem HorizontalAlignment="Stretch" Background="#00657C" Height="50"  >
                 <StackPanel Orientation="Horizontal" Width="398">
                     <Label FontSize="18" FontWeight="DemiBold">Name:</Label>
-                    <Label FontSize="18">Joafsf</Label>
+                    <Label FontSize="18">João Almeida</Label>
                 </StackPanel>
             </ListViewItem>
             <ListViewItem Margin="0,10,0,0" HorizontalAlignment="Stretch" Background="#00657C" Height="50" Padding="5" >
                 <StackPanel Orientation="Horizontal" Width="398">
                     <Label FontSize="18" FontWeight="DemiBold">Birthday:</Label>
-                    <Label FontSize="18">25/05/1888</Label>
+                    <Label FontSize="18">25/05/1994</Label>
                 </StackPanel>
             </ListViewItem>
             <ListViewItem Margin="0,10,0,0" HorizontalAlignment="Stretch" Background="#00657C" Height="50" Padding="5" >
@@ -47,7 +47,7 @@
             <ListViewItem Margin="0,10,0,0" HorizontalAlignment="Stretch" Background="#00657C" Height="50" Padding="5" >
                 <StackPanel Orientation="Horizontal" Width="398">
                     <Label FontSize="18" FontWeight="DemiBold">Telemovél:</Label>
-                    <Label FontSize="18">9677...</Label>
+                    <Label FontSize="18">967744558</Label>
                 </StackPanel>
             </ListViewItem>
         </ListView>

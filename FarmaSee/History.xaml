@@ -34,7 +34,7 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
                         <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 1</Label>
-                        <Label>sdfsdf</Label>
+                        <Label>nome da farmaceutica</Label>
                     </StackPanel>
                     <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
                 </Grid>
@@ -47,7 +47,7 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
                         <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 2</Label>
-                        <Label>sdfsdf</Label>
+                        <Label>nome da farmaceutica</Label>
                     </StackPanel>
                     <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
                 </Grid>
@@ -60,7 +60,7 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
                         <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 3</Label>
-                        <Label>sdfsdf</Label>
+                        <Label>nome da farmaceutica</Label>
                     </StackPanel>
                     <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
                 </Grid>
@@ -73,7 +73,7 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
                         <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 4</Label>
-                        <Label>sdfsdf</Label>
+                        <Label>nome da farmaceutica</Label>
                     </StackPanel>
                     <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
                 </Grid>
@@ -86,7 +86,7 @@
                     </Grid.ColumnDefinitions>
                     <StackPanel Grid.Column="0">
                         <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 5</Label>
-                        <Label>sdfsdf</Label>
+                        <Label>nome da farmaceutica</Label>
                     </StackPanel>
                     <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
                 </Grid>
