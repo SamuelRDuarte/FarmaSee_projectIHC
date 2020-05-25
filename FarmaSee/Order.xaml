@@ -68,7 +68,7 @@
             </ListView>
         </Border>
         <Label Grid.Row="1" Content="Medicine without need of prescription" FontSize="17" HorizontalContentAlignment="Center" Margin="10,201.2,81.4,321.4" RenderTransformOrigin="0.86,0.562" Foreground="#F9F9F9"/>
-        <StackPanel Grid.Row="1" Background="#196289" Margin="0,476.2,0.4,44.4">
+        <StackPanel Grid.Row="1" Background="#196289" Margin="1,446,-1,75">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -144,6 +144,7 @@
 
             </ListView>
         </Border>
+        <Button Content="Payment" Foreground="MediumBlue"   Style="{StaticResource PaymentButtonsStyle2}" Margin="90,508,90,18" Grid.Row="1" Width="Auto" Click="ButtonPayment_Click"/>
 
         <!--<ListBox Name="Histórico" Grid.Row="1" Background="Transparent"/>-->
     </Grid>

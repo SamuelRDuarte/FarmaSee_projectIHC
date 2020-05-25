@@ -36,5 +36,10 @@ namespace FarmaSee
             Search sear = new Search();
             this.NavigationService.Navigate(sear);
         }
+
+        private void ButtonPayment_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Payment());
+        }
     }
 }
