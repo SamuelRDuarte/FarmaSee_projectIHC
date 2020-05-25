@@ -23,5 +23,17 @@ namespace FarmaSee
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Home home = new Home();
+            this.NavigationService.Navigate(home);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Order order = new Order();
+            this.NavigationService.Navigate(order);
+        }
     }
 }
