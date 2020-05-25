@@ -27,34 +27,69 @@
 
         <ListBox Name="Histórico" Grid.Row="1" Background="Transparent">
             <ListBoxItem Style="{StaticResource ListItemStyle}" >
-                <StackPanel>
-                    <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 1</Label>
-                    <Label>sdfsdf</Label>
-                </StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="280"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 1</Label>
+                        <Label>sdfsdf</Label>
+                    </StackPanel>
+                    <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
+                </Grid>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource ListItemStyle}" >
-                <StackPanel>
-                    <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 2</Label>
-                    <Label>sdfsdf</Label>
-                </StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="280"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 2</Label>
+                        <Label>sdfsdf</Label>
+                    </StackPanel>
+                    <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
+                </Grid>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource ListItemStyle}" >
-                <StackPanel>
-                    <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 3</Label>
-                    <Label>sdfsdf</Label>
-                </StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="280"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 3</Label>
+                        <Label>sdfsdf</Label>
+                    </StackPanel>
+                    <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
+                </Grid>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource ListItemStyle}" >
-                <StackPanel>
-                    <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 4</Label>
-                    <Label>sdfsdf</Label>
-                </StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="280"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 4</Label>
+                        <Label>sdfsdf</Label>
+                    </StackPanel>
+                    <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
+                </Grid>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource ListItemStyle}" >
-                <StackPanel>
-                    <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 5</Label>
-                    <Label>sdfsdf</Label>
-                </StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="280"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 5</Label>
+                        <Label>sdfsdf</Label>
+                    </StackPanel>
+                    <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
+                </Grid>
             </ListBoxItem>
         </ListBox>
     </Grid>
