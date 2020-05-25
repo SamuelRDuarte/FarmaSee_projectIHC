@@ -35,5 +35,28 @@ namespace FarmaSee
             Order order = new Order();
             this.NavigationService.Navigate(order);
         }
+
+        private void plus_click(object sender, RoutedEventArgs e)
+        {
+            int quant = Convert.ToInt32(quantityLabel.Content);
+            quantityLabel.Content = (quant + 1).ToString();
+            minusButton.IsEnabled = true;
+        }
+
+        private void minus_click(object sender, RoutedEventArgs e)
+        {
+            int quant = Convert.ToInt32(quantityLabel.Content);
+            int result = quant - 1;
+
+            if (result == 0)
+            {
+                minusButton.IsEnabled = false;
+                quantityLabel.Content = result.ToString();
+            }
+            else
+            {
+                quantityLabel.Content = result.ToString();
+            }
+        }
     }
 }
