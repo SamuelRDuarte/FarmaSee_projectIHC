@@ -19,35 +19,43 @@
             <RowDefinition Height="153*"/>
             <RowDefinition Height="197*"/>
         </Grid.RowDefinitions>
+        <Rectangle Fill="#F9F9F9"   Height="74" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
+
         <Label Content="Profile" Style="{StaticResource TitulolabelStyle}" Margin="155,10,155,0" Height="50" HorizontalAlignment="Stretch" />
         <Image Source="back_icon.png" Margin="10,10,350,243" MouseUp="Image_MouseUp"/>
         <!--<Image Margin="114,68" Source="profile-avatar-png-15.png" Stretch="Fill"/>-->
-        <materialDesign:PackIcon Kind="PersonCircle" Width="162" Height="146" VerticalAlignment="Center" Margin="126,77,0,83.4" Foreground="#D3D3D3"/>
+        <materialDesign:PackIcon Kind="PersonCircle" Width="Auto" Height="146" VerticalAlignment="Bottom" Margin="126,0,126,64" Foreground="#D3D3D3" HorizontalAlignment="Stretch"/>
         <Label Content="Username" Foreground="White" FontSize="20" FontWeight="DemiBold" Margin="157,256,155.4,14.4" RenderTransformOrigin="0.515,0.472"/>
 
-        <ListView Grid.Row="1" Background="Transparent" Height="250" BorderThickness="0">
+        <ListView Grid.Row="1" Background="Transparent" BorderThickness="0" Margin="0,72,0,20">
             <ListViewItem HorizontalAlignment="Stretch" Background="#00657C" Height="50"  >
                 <StackPanel Orientation="Horizontal" Width="398">
-                    <Label FontSize="18" FontWeight="DemiBold">Name:</Label>
-                    <Label FontSize="18">João Almeida</Label>
+                    <Label FontSize="18" Foreground="White" FontWeight="DemiBold">Name:</Label>
+                    <Label FontSize="18" Foreground="White">João Almeida</Label>
                 </StackPanel>
             </ListViewItem>
             <ListViewItem Margin="0,10,0,0" HorizontalAlignment="Stretch" Background="#00657C" Height="50" Padding="5" >
                 <StackPanel Orientation="Horizontal" Width="398">
-                    <Label FontSize="18" FontWeight="DemiBold">Birthday:</Label>
-                    <Label FontSize="18">25/05/1994</Label>
+                    <Label FontSize="18" Foreground="White" FontWeight="DemiBold">Birthday:</Label>
+                    <Label FontSize="18" Foreground="White">25/05/1994</Label>
                 </StackPanel>
             </ListViewItem>
             <ListViewItem Margin="0,10,0,0" HorizontalAlignment="Stretch" Background="#00657C" Height="50" Padding="5" >
                 <StackPanel Orientation="Horizontal" Width="398">
-                    <Label FontSize="18" FontWeight="DemiBold">Email:</Label>
-                    <Label FontSize="18">tozedasquintas@ua.pt</Label>
+                    <Label FontSize="18" Foreground="White" FontWeight="DemiBold">Email:</Label>
+                    <Label FontSize="18" Foreground="White">tozedasquintas@ua.pt</Label>
                 </StackPanel>
             </ListViewItem>
             <ListViewItem Margin="0,10,0,0" HorizontalAlignment="Stretch" Background="#00657C" Height="50" Padding="5" >
                 <StackPanel Orientation="Horizontal" Width="398">
-                    <Label FontSize="18" FontWeight="DemiBold">Telemovél:</Label>
-                    <Label FontSize="18">967744558</Label>
+                    <Label FontSize="18" Foreground="White" FontWeight="DemiBold">Mobile Phone:</Label>
+                    <Label FontSize="18" Foreground="White" >967744558</Label>
+                </StackPanel>
+            </ListViewItem>
+            <ListViewItem Margin="0,10,0,0" HorizontalAlignment="Stretch" Background="#00657C" Height="50" Padding="5" >
+                <StackPanel Orientation="Horizontal" Width="398">
+                    <Label FontSize="18" Foreground="White" FontWeight="DemiBold">Address:</Label>
+                    <Label FontSize="18" Foreground="White" >Aveiro</Label>
                 </StackPanel>
             </ListViewItem>
         </ListView>

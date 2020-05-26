@@ -58,10 +58,10 @@
         </Border>
         <Label Content="Pending Deliveries:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="113,475,114,0" VerticalAlignment="Top" Width="167" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>
         <Label Content="1x Brufen 600" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,532,10,0" VerticalAlignment="Top" Width="374" FontSize="19" Foreground="White" RenderTransformOrigin="0.562,0.2" Height="61" Opacity="0.8" BorderThickness="0"/>
-        <TextBlock HorizontalAlignment="Center" Margin="15,567,0,0" TextWrapping="Wrap" Text="(from Farmácia Moderna, ETA: 7 hours and 13 minutes)" VerticalAlignment="Top" Opacity="0.8" />
+        <TextBlock HorizontalAlignment="Center" Foreground="Wheat" Margin="15,567,0,0" TextWrapping="Wrap" Text="(from Farmácia Moderna, ETA: 7 hours and 13 minutes)" VerticalAlignment="Top" Opacity="0.8" />
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="61" Margin="10,532,0,0"  VerticalAlignment="Top" Width="374" Opacity="0.1"/>
         <Label Content="1x Voltaren Gel" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,655,10,0" VerticalAlignment="Top" Width="374" FontSize="19" Foreground="White" RenderTransformOrigin="0.562,0.2" Height="61" Opacity="0.8" BorderThickness="0"/>
-        <TextBlock HorizontalAlignment="Center" Margin="15,690,0,0" TextWrapping="Wrap" Text="(from Farmácia Oudinot)" VerticalAlignment="Top" Opacity="0.8" />
+        <TextBlock HorizontalAlignment="Center" Foreground="Wheat" Margin="15,690,0,0" TextWrapping="Wrap" Text="(from Farmácia Oudinot)" VerticalAlignment="Top" Opacity="0.8" />
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="61" Margin="10,651,0,0" VerticalAlignment="Top" Width="374" Opacity="0.1"/>
 
 

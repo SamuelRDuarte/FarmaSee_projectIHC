@@ -21,25 +21,25 @@
             <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem1_MouseDoubleClick" >
                 <StackPanel>
                     <Label Style="{StaticResource FarmaciaLabelStyle}" Content="Farmácia Oudinot"/>
-                    <Label FontSize="14" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
+                    <Label FontSize="14" Foreground="Wheat" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem2_MouseDoubleClick" >
                 <StackPanel>
                     <Label Style="{StaticResource FarmaciaLabelStyle}" Content="Farmácia Central - Aveiro"/>
-                    <Label FontSize="14" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
+                    <Label FontSize="14" Foreground="Wheat" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem3_MouseDoubleClick" >
                 <StackPanel>
                     <Label Style="{StaticResource FarmaciaLabelStyle}" Content="Farmácia Nova"/>
-                    <Label FontSize="14" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
+                    <Label FontSize="14" Foreground="Wheat" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem4_MouseDoubleClick">
                 <StackPanel>
                     <Label Style="{StaticResource FarmaciaLabelStyle}" Content="Farmácia Moderna"/>
-                    <Label FontSize="14" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
+                    <Label FontSize="14" Foreground="Wheat" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
                 </StackPanel>
             </ListBoxItem>
         </ListBox>
