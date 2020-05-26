@@ -8,41 +8,43 @@
         Title="Search" Height="736" Width="414">
 
     <Grid Background="#00517C">
-        <Label Style="{StaticResource TitulolabelStyle}" Margin="152,10,152,0">Search</Label>
+        <Rectangle Fill="#F9F9F9"   Height="147" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
+        <Label Style="{StaticResource TitulolabelStyle}" Margin="152,10,152,0" Content="Search"/>
 
-        <Button Height="25" Width="60" Content="Cancel" VerticalAlignment="Top" Margin="20,22,334.4,0" Background="Transparent" BorderBrush="Transparent" Foreground="Tomato" FontSize="16" FontWeight="Medium" Click="Button_Click"></Button>
-        <TextBox Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search a farmacy..." Margin="78,78,70,0" />
+
+        <Button Height="25" Width="60" Content="Cancel" VerticalAlignment="Top" Margin="20,22,334.4,0" Background="Transparent" BorderBrush="Transparent" Foreground="Tomato" FontSize="16" FontWeight="Medium" Click="Button_Click"/>
+        <TextBox Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search a farmacy..." BorderThickness="0" Background="LightGray" Foreground="Black"  Margin="78,78,70,0" />
 
         <Label Content="Please select a farmacy." Margin="10,118,270,593"/>
 
-        <ListBox Name="Farmacias" Background="Transparent" Margin="0,148,0,0.4">
+        <ListBox x:Name="Farmacias" BorderThickness="0" Background="Transparent" Margin="0,148,0,0.4">
             <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem1_MouseDoubleClick" >
                 <StackPanel>
-                    <Label Style="{StaticResource FarmaciaLabelStyle}">Farmácia Oudinot</Label>
-                    <Label FontSize="14">Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro</Label>
+                    <Label Style="{StaticResource FarmaciaLabelStyle}" Content="Farmácia Oudinot"/>
+                    <Label FontSize="14" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem2_MouseDoubleClick" >
                 <StackPanel>
-                    <Label Style="{StaticResource FarmaciaLabelStyle}">Farmácia Central - Aveiro</Label>
-                    <Label FontSize="14">Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro</Label>
+                    <Label Style="{StaticResource FarmaciaLabelStyle}" Content="Farmácia Central - Aveiro"/>
+                    <Label FontSize="14" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem3_MouseDoubleClick" >
                 <StackPanel>
-                    <Label Style="{StaticResource FarmaciaLabelStyle}">Farmácia Nova</Label>
-                    <Label FontSize="14">Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro</Label>
+                    <Label Style="{StaticResource FarmaciaLabelStyle}" Content="Farmácia Nova"/>
+                    <Label FontSize="14" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
                 </StackPanel>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem4_MouseDoubleClick">
                 <StackPanel>
-                    <Label Style="{StaticResource FarmaciaLabelStyle}">Farmácia Moderna</Label>
-                    <Label FontSize="14">Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro</Label>
+                    <Label Style="{StaticResource FarmaciaLabelStyle}" Content="Farmácia Moderna"/>
+                    <Label FontSize="14" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
                 </StackPanel>
             </ListBoxItem>
         </ListBox>
 
-        <Image Source="keyboard.png" Margin="0,421,0,0.4" Stretch="Fill"></Image>
-        
+        <Image Source="keyboard.png" Margin="0,421,0,0.4" Stretch="Fill"/>
+
     </Grid>
 </Page>

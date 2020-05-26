@@ -3,10 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:FarmaSee"
-        mc:Ignorable="d"
+        xmlns:local="clr-namespace:FarmaSee" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
         Title="Payment" Height="700" Width="414">
     <Grid Background="#00517C">
+        <Rectangle Fill="#F9F9F9"   Height="66" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
+
         <Label Style="{StaticResource TitulolabelStyle}">Payment</Label>
 
         <Grid Margin="0,60,0,70">
@@ -31,10 +33,11 @@
                             <StackPanel Grid.Column="0">
                                 <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 1</Label>
                             </StackPanel>
-                            <Button Name="plusButton" Content="+" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
+                            <Button Name="plusButton" Content="+" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
                             <Label Name="quantityLabel" Content="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
-                            <Button Name="minusButton" Content="-" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
-                            <Image Grid.Column="4" Source="remove.png" Width="20"></Image>
+                            <Button Name="minusButton" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
+                            <!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>-->
+                            <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
                         </Grid>
                     </ListBoxItem>
 
@@ -50,10 +53,11 @@
                             <StackPanel Grid.Column="0">
                                 <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 2</Label>
                             </StackPanel>
-                            <Button Name="plusButton2" Content="+" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
+                            <Button Name="plusButton2" Content="+" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
                             <Label Name="quantityLabel2" Content="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
-                            <Button Name="minusButton2" Content="-" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
-                            <Image Grid.Column="4" Source="remove.png" Width="20"></Image>
+                            <Button Name="minusButton2" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
+                            <!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>-->
+                            <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
                         </Grid>
                     </ListBoxItem>
 
@@ -69,10 +73,11 @@
                             <StackPanel Grid.Column="0">
                                 <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 3</Label>
                             </StackPanel>
-                            <Button Name="plusButton3" Content="+" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
+                            <Button Name="plusButton3" Content="+" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
                             <Label Name="quantityLabel3" Content="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
-                            <Button Name="minusButton3" Content="-" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
-                            <Image Grid.Column="4" Source="remove.png" Width="20"></Image>
+                            <Button Name="minusButton3" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
+                            <!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>-->
+                            <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
                         </Grid>
                     </ListBoxItem>
 
@@ -88,10 +93,11 @@
                             <StackPanel Grid.Column="0">
                                 <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 4</Label>
                             </StackPanel>
-                            <Button Name="plusButton4" Content="+" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
+                            <Button Name="plusButton4" Content="+" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
                             <Label Name="quantityLabel4" Content="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
-                            <Button Name="minusButton4" Content="-" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
-                            <Image Grid.Column="4" Source="remove.png" Width="20"></Image>
+                            <Button Name="minusButton4" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
+                            <!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>-->
+                            <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
                         </Grid>
                     </ListBoxItem>
 
@@ -107,10 +113,11 @@
                             <StackPanel Grid.Column="0">
                                 <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 5</Label>
                             </StackPanel>
-                            <Button Name="plusButton5" Content="+" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
+                            <Button Name="plusButton5" Content="+" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
                             <Label Name="quantityLabel5" Content="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
-                            <Button Name="minusButton5" Content="-" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
-                            <Image Grid.Column="4" Source="remove.png" Width="20"></Image>
+                            <Button Name="minusButton5" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
+                            <!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>-->
+                            <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
                         </Grid>
                     </ListBoxItem>
                 </ListBox>
