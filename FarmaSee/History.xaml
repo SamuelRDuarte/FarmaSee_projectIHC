@@ -20,10 +20,10 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Rectangle Fill="#F9F9F9"   Height="130" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
-        <Label Grid.Row="0" Content="History" FontSize="21" HorizontalContentAlignment="Center" Margin="141,26,141,65" RenderTransformOrigin="0.86,0.562"/>
-        <TextBox Grid.Row="0" Template="{StaticResource SearchBoxTemplate}" Height="29" BorderThickness="0" Background="LightGray" TextWrapping="Wrap" Text="Search..." FontSize="17" VerticalAlignment="Top" Margin="82,85,64,0" Foreground="Black" />
+        <Label Grid.Row="0" Style="{StaticResource TitulolabelStyle}" Content="History"  HorizontalContentAlignment="Center" Margin="131,18,131,0" HorizontalAlignment="Stretch"/>
+        <TextBox Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search a farmacy..." BorderThickness="0" Background="LightGray" Foreground="Black"  Margin="71,78,49,0" Width="274" Height="37" />
 
-        <Image Source="menu.png"  Grid.Column="0" Margin="22,85,338,16"  Stretch="Fill" MouseUp="Image_MouseUp" />
+        <Image Source="menu.png"  Grid.Column="0" Margin="22,80,335,16"  Stretch="Fill" MouseUp="Image_MouseUp" />
 
         <ListBox Name="Histórico" Grid.Row="1" Background="Transparent">
             <ListBoxItem Style="{StaticResource ListItemStyle}" >

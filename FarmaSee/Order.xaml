@@ -20,10 +20,10 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Rectangle Fill="#F9F9F9"   Height="77" Margin="0,0,0.4,0" Stroke="Transparent" VerticalAlignment="Top"/>
-        <Label Grid.Row="0" Content="Order" FontSize="21" HorizontalContentAlignment="Center" Margin="141,26,141.4,63.8" RenderTransformOrigin="0.86,0.562"/>
+        <Label Style="{StaticResource TitulolabelStyle}" Grid.Row="0" Content="Order"  HorizontalContentAlignment="Center" Margin="152,14,152,0" RenderTransformOrigin="0.86,0.562" HorizontalAlignment="Stretch"/>
 
-        <Image Source="menu.png" Grid.Column="0" Margin="20,32,340.4,68.8"  Stretch="Fill" MouseUp="Image_MouseUp" />
-        <materialDesign:PackIcon Foreground="#A7A7A7" Kind="Search" Margin="351,32,0,0" Height="29" Width="25"/>
+        <Image Source="menu.png" Grid.Column="0" Margin="20,26,340,73"  Stretch="Fill" MouseUp="Image_MouseUp" />
+        <materialDesign:PackIcon Foreground="#A7A7A7" Kind="Search" Margin="351,30,0,0" Height="26" Width="25"/>
         <Label Grid.Row="0" Content="Best Sellers" FontSize="21" HorizontalContentAlignment="Center" Margin="5,90,269.4,561.4" RenderTransformOrigin="0.86,0.562" Grid.RowSpan="2" Foreground="#F9F9F9"/>
         <Border BorderBrush="#60973D" BorderThickness="0,0,0,1" HorizontalAlignment="Center" Height="167" Margin="20,10.2,10.4,0" VerticalAlignment="Top" Width="364" Grid.Row="1" >
             <ListView x:Name="Lista" Visibility="Visible"  BorderBrush="White" BorderThickness="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#00517C" Margin="3,4,0,4.8"  Background="#196289" HorizontalAlignment="Left" Width="361" RenderTransformOrigin="0.5,0.5">
@@ -76,7 +76,7 @@
                 </Grid.ColumnDefinitions>
             </Grid>
             <Label Content="Select pharmacy" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" Margin="10,0,0,20" Width="160"/>
-            
+
             <Button x:Name="ButtonOpenMenu" HorizontalAlignment="Right" Width="30" Height="30" Background="{x:Null}" Margin="0,-70,12,0" BorderBrush="{x:Null}" VerticalAlignment="Center" Click="ButtonPharmacy_Click">
                 <materialDesign:PackIcon Foreground="#A7A7A7" Kind="Pharmacy" Height="22" Width="23"/>
             </Button>
