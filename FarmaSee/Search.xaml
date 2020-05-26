@@ -7,22 +7,36 @@
         mc:Ignorable="d"
         Title="Search" Height="736" Width="414">
 
-    <Grid Background="#00517C">
+    <Grid xmlns:local="clr-namespace:FarmaSee">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="#00517C" Offset="0.6" />
+                <GradientStop Color="#00293F" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.Resources>
+            <local:ListaFarmacias x:Key="Farmacias"/>
+        </Grid.Resources>
         <Rectangle Fill="#F9F9F9"   Height="147" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
         <Label Style="{StaticResource TitulolabelStyle}" Margin="152,10,152,0" Content="Search"/>
 
 
         <Button Height="25" Width="60" Content="Cancel" VerticalAlignment="Top" Margin="20,22,334.4,0" Background="Transparent" BorderBrush="Transparent" Foreground="Tomato" FontSize="16" FontWeight="Medium" Click="Button_Click"/>
-        <TextBox Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search a farmacy..." BorderThickness="0" Background="LightGray" Foreground="Black"  Margin="78,78,70,0" />
+        <TextBox Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search a farmacy..." BorderThickness="0" Background="LightGray" Foreground="Black"  Margin="78,78,70,0"/>
 
         <Label Content="Please select a farmacy." Margin="10,118,270,593"/>
 
-        <ListBox x:Name="Farmacias" BorderThickness="0" Background="Transparent" Margin="0,148,0,0.4">
-            <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem1_MouseDoubleClick" >
-                <StackPanel>
-                    <Label Style="{StaticResource FarmaciaLabelStyle}" Content="Farmácia Oudinot"/>
-                    <Label FontSize="14" Foreground="Wheat" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
-                </StackPanel>
+        <ListBox x:Name="FarmaciasListBox" BorderThickness="0" MouseDoubleClick="ListBoxItem_MouseDoubleClick"  Background="Transparent" Margin="0,148,0,0.4" ItemsSource="{Binding Source={StaticResource Farmacias}}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Style="{StaticResource SearchItemStyle}" Width="412">
+                        <Label Style="{StaticResource FarmaciaLabelStyle}" Content="{Binding Path=Nome}"/>
+                        <Label FontSize="14" Foreground="Wheat" Content="{Binding Path=Morada}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <!--<ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem1_MouseDoubleClick" >
+                
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource SearchListItemStyle}" MouseDoubleClick="ListBoxItem2_MouseDoubleClick" >
                 <StackPanel>
@@ -41,10 +55,10 @@
                     <Label Style="{StaticResource FarmaciaLabelStyle}" Content="Farmácia Moderna"/>
                     <Label FontSize="14" Foreground="Wheat" Content="Av. Dr. Lourenço Peixinho 145, 3800-166 Aveiro"/>
                 </StackPanel>
-            </ListBoxItem>
+            </ListBoxItem>-->
         </ListBox>
 
-        <Image Source="keyboard.png" Margin="0,421,0,0.4" Stretch="Fill"/>
+        <!--<Image Source="keyboard.png" Margin="0,421,0,0.4" Stretch="Fill"/>-->
 
     </Grid>
 </Page>

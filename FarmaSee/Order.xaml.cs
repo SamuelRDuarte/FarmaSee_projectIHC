@@ -39,7 +39,15 @@ namespace FarmaSee
 
         private void ButtonPayment_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Payment());
+            if(selectFarmacia.Content != null)
+            {
+                this.NavigationService.Navigate(new Payment());
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma farmacia", "Erro", MessageBoxButton.OK);
+            }
+            
         }
     }
 }

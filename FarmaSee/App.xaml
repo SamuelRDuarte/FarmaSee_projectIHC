@@ -10,7 +10,7 @@
             <Setter Property="Background" Value="White"/>
         </Style>
 
-        <Style TargetType="ListBoxItem" BasedOn="{StaticResource ListItemStyle}" x:Key="SearchListItemStyle">
+        <Style TargetType="StackPanel"  x:Key="SearchItemStyle">
             <Setter Property="Margin" Value="0,2,0,0"/>
             <Setter Property="Background" Value="#196289"/>
             <Setter Property="Height" Value="60"/>
