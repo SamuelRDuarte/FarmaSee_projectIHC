@@ -10,6 +10,7 @@
     <Grid Background="#00517C">
         <Label Style="{StaticResource TitulolabelStyle}" Margin="152,10,152,0">Search</Label>
 
+        <Button Height="25" Width="60" Content="Cancel" VerticalAlignment="Top" Margin="20,22,334.4,0" Background="Transparent" BorderBrush="Transparent" Foreground="Tomato" FontSize="16" FontWeight="Medium" Click="Button_Click"></Button>
         <TextBox Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search a farmacy..." Margin="78,78,70,0" />
 
         <Label Content="Please select a farmacy." Margin="10,118,270,593"/>
@@ -42,5 +43,6 @@
         </ListBox>
 
         <Image Source="keyboard.png" Margin="0,421,0,0.4" Stretch="Fill"></Image>
+        
     </Grid>
 </Page>

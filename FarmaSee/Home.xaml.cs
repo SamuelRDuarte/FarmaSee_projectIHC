@@ -83,5 +83,35 @@ namespace FarmaSee
             Payment payment = new Payment();
             this.NavigationService.Navigate(payment);
         }
+
+        private void enterPrescription(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new Payment());
+        }
+
+        private void search(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new Order());
+        }
+
+        private void searchTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            search_textbox.Text = "";
+        }
+
+        private void searchTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            search_textbox.Text = "Search...";
+        }
+
+        private void keyTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            key_input.Text = "";
+        }
+
+        private void keyTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            key_input.Text = "Key...";
+        }
     }
 }
