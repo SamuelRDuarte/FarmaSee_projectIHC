@@ -34,6 +34,7 @@ namespace FarmaSee
         private void ButtonPharmacy_Click(object sender, RoutedEventArgs e)
         {
             Search sear = new Search();
+            MainWindow.AddFarmacia(new Farmacia { Nome = "Teste", Morada = "Olsfisf" });
             this.NavigationService.Navigate(sear);
         }
 

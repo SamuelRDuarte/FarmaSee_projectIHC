@@ -25,72 +25,55 @@
 
         <Image Source="menu.png"  Grid.Column="0" Margin="22,80,335,16"  Stretch="Fill" MouseUp="Image_MouseUp" />
 
-        <ListBox Name="Histórico" Grid.Row="1" Background="Transparent">
-            <ListBoxItem Style="{StaticResource ListItemStyle}" >
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="280"/>
-                        <ColumnDefinition Width="100"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0">
-                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 1</Label>
+        <ListBox Name="ListBoxHistórico" Grid.Row="1" Background="Transparent">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Style="{StaticResource SearchItemStyle}" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,-1,0">
+                    <StackPanel>
+                            <Label Style="{StaticResource FarmaciaLabelStyle}" Width="274" Content="{Binding Path=Medicamento}"></Label>
+                            <Label FontSize="14" Foreground="Wheat"  Content="{Binding Path=Farmacia}"></Label>
+                    </StackPanel>
+                        <Label Content="{Binding Path=Data}" FontSize="14" Foreground="White" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0" Width="108" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+            <!--<ListBoxItem Style="{StaticResource ListItemStyle}" >
+                <StackPanel  Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,-1,0">
+                    <StackPanel>
+                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black" Width="274">Medicine 1</Label>
                         <Label>nome da farmaceutica</Label>
                     </StackPanel>
-                    <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
-                </Grid>
+                    <Label FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0" Width="108" Content="21/05/2020"/>
+                </StackPanel>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource ListItemStyle}" >
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="280"/>
-                        <ColumnDefinition Width="100"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0">
-                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 2</Label>
+                <StackPanel  Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,-1,0">
+                    <StackPanel>
+                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black" Width="274">Medicine 1</Label>
                         <Label>nome da farmaceutica</Label>
                     </StackPanel>
-                    <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
-                </Grid>
+                    <Label FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0" Width="108" Content="21/05/2020"/>
+                </StackPanel>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource ListItemStyle}" >
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="280"/>
-                        <ColumnDefinition Width="100"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0">
-                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 3</Label>
+                <StackPanel  Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,-1,0">
+                    <StackPanel>
+                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black" Width="274">Medicine 1</Label>
                         <Label>nome da farmaceutica</Label>
                     </StackPanel>
-                    <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
-                </Grid>
+                    <Label FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0" Width="108" Content="21/05/2020"/>
+                </StackPanel>
             </ListBoxItem>
             <ListBoxItem Style="{StaticResource ListItemStyle}" >
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="280"/>
-                        <ColumnDefinition Width="100"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0">
-                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 4</Label>
+                <StackPanel  Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,-1,0">
+                    <StackPanel>
+                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black" Width="274">Medicine 1</Label>
                         <Label>nome da farmaceutica</Label>
                     </StackPanel>
-                    <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
-                </Grid>
-            </ListBoxItem>
-            <ListBoxItem Style="{StaticResource ListItemStyle}" >
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="280"/>
-                        <ColumnDefinition Width="100"/>
-                    </Grid.ColumnDefinitions>
-                    <StackPanel Grid.Column="0">
-                        <Label Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black">Medicine 5</Label>
-                        <Label>nome da farmaceutica</Label>
-                    </StackPanel>
-                    <Label Grid.Column="1" FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0">21/05/2020</Label>
-                </Grid>
-            </ListBoxItem>
+                    <Label FontSize="14" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="0,0,-2,0" Width="108" Content="21/05/2020"/>
+                </StackPanel>
+            </ListBoxItem>-->
         </ListBox>
     </Grid>
 </Page>

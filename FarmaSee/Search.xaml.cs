@@ -54,6 +54,7 @@ namespace FarmaSee
         public Search()
         {
             InitializeComponent();
+            FarmaciasListBox.ItemsSource = MainWindow.Farmacias;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

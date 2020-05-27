@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,43 @@ using System.Windows.Shapes;
 
 namespace FarmaSee
 {
+    public class Compra
+    {
+        private string _medicamento;
+        private string _farmacia;
+        private string _data;
+        
+        public string Medicamento
+        {
+            set { _medicamento = value;}
+            get { return _medicamento;}
+        }
+
+        public string Farmacia
+        {
+            set { _farmacia = value; }
+            get { return _farmacia; }
+        }
+
+        public string Data
+        {
+            set { _data = value; }
+            get { return _data; }
+        }
+    }
+
+    public class ListaCompras : ObservableCollection<Compra>
+    {
+        public ListaCompras()
+        {
+            Add(new Compra { Medicamento = "Lisinopril 5mg", Farmacia = "Farmácia Oudinot", Data="14/05/2020" });
+            Add(new Compra { Medicamento = "Ferro-Tardyferon 80mg", Farmacia = "Farmácia Nova", Data = "12/02/2020" });
+            Add(new Compra { Medicamento = "Voltaren Gel", Farmacia = "Farmácia Nova", Data = "12/02/2020" });
+            Add(new Compra { Medicamento = "Aspirina C 500 mg", Farmacia = "Farmácia Oudinot", Data = "18/12/2019" });
+
+        }
+    }
+
     /// <summary>
     /// Interaction logic for History.xaml
     /// </summary>
@@ -23,6 +61,7 @@ namespace FarmaSee
         public History()
         {
             InitializeComponent();
+            ListBoxHistórico.ItemsSource = MainWindow.Compras;
         }
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)

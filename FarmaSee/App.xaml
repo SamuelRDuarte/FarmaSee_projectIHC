@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:FarmaSee"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style x:Key="ListItemStyle" TargetType="{x:Type ListBoxItem}">
+        <Style x:Key="ListItemStyle" TargetType="{x:Type StackPanel}">
             <Setter Property="Margin" Value="0,3,0,0"/>
             <Setter Property="Height" Value="60"/>
             <Setter Property="Background" Value="White"/>

@@ -14,9 +14,9 @@
                 <GradientStop Color="#00293F" Offset="1.0" />
             </LinearGradientBrush>
         </Grid.Background>
-        <Grid.Resources>
+        <!--<Grid.Resources>
             <local:ListaFarmacias x:Key="Farmacias"/>
-        </Grid.Resources>
+        </Grid.Resources>-->
         <Rectangle Fill="#F9F9F9"   Height="147" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
         <Label Style="{StaticResource TitulolabelStyle}" Margin="152,10,152,0" Content="Search"/>
 
@@ -26,7 +26,7 @@
 
         <Label Content="Please select a farmacy." Margin="10,118,270,593"/>
 
-        <ListBox x:Name="FarmaciasListBox" BorderThickness="0" MouseDoubleClick="ListBoxItem_MouseDoubleClick"  Background="Transparent" Margin="0,148,0,0.4" ItemsSource="{Binding Source={StaticResource Farmacias}}">
+        <ListBox x:Name="FarmaciasListBox" BorderThickness="0" MouseDoubleClick="ListBoxItem_MouseDoubleClick"  Background="Transparent" Margin="0,148,0,0.4" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Style="{StaticResource SearchItemStyle}" Width="412">
