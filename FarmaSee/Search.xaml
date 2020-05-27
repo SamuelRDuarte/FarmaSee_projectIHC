@@ -22,7 +22,7 @@
 
 
         <Button Height="25" Width="60" Content="Cancel" VerticalAlignment="Top" Margin="20,22,334.4,0" Background="Transparent" BorderBrush="Transparent" Foreground="Tomato" FontSize="16" FontWeight="Medium" Click="Button_Click"/>
-        <TextBox Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search a farmacy..." BorderThickness="0" Background="LightGray" Foreground="Black"  Margin="78,78,70,0"/>
+        <TextBox Name="TexBoxSearch"  KeyUp="TexBoxSearch_KeyUp" GotFocus="searchTextBox_GotFocus" LostFocus="searchTextBox_LostFocus" Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search a farmacy..." BorderThickness="0" Background="LightGray" Foreground="Black"  Margin="78,78,70,0"/>
 
         <Label Content="Please select a farmacy." Margin="10,118,270,593"/>
 
