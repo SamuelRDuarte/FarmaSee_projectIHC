@@ -41,6 +41,9 @@ namespace FarmaSee
             Add(new Farmacia { Nome = "Farmácia Central - Aveiro", Morada= "R. dos Mercadores 26 28, 3800-225 Aveiro" });
             Add(new Farmacia { Nome = "Farmácia Nova", Morada= "R. Dr. Mário Sacramento 131, 3810-106 Aveiro" });
             Add(new Farmacia { Nome = "Farmácia Moderna", Morada= "R. dos Combatentes da Grande Guerra 103 105, 3810-087 Aveiro" });
+            Add(new Farmacia { Nome = "Farmácia Portugal De Viseu", Morada = "Av. Alberto Sampaio nº 76 3510-027 Viseu" });
+            Add(new Farmacia { Nome = "Farmácia Grão Vasco", Morada = "Avenida António José de Almeida nº 230 3510-043 Viseu" });
+            Add(new Farmacia { Nome = "Farmácia da Misericórdia", Morada = "Av. 10 de Junho 1, 3500-202 Viseu" });
 
         }
     }

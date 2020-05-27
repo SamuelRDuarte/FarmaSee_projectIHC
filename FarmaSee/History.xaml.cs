@@ -69,5 +69,31 @@ namespace FarmaSee
             Menu menu = new Menu();
             this.NavigationService.Navigate(menu);
         }
+
+        private void searchTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TexBoxSearch.Text = "";
+        }
+
+        private void searchTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TexBoxSearch.Text = " Search for medicine or pharmacy...";
+        }
+
+        private void TexBoxSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            ObservableCollection<Compra> lista;
+
+            if (TexBoxSearch.Text.Length > 2)
+            {
+                lista = new ObservableCollection<Compra>(MainWindow.Compras.ToList().FindAll(fa =>
+                                                                       fa.Medicamento.ToLower().Contains(TexBoxSearch.Text.ToLower()) || fa.Farmacia.ToLower().Contains(TexBoxSearch.Text.ToLower())));
+                ListBoxHistórico.ItemsSource = lista;
+            }
+            else
+            {
+                ListBoxHistórico.ItemsSource = MainWindow.Compras;
+            }
+        }
     }
 }

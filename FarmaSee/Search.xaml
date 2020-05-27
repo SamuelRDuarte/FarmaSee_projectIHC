@@ -31,7 +31,7 @@
                 <DataTemplate>
                     <StackPanel Style="{StaticResource SearchItemStyle}" Width="412">
                         <Label Style="{StaticResource FarmaciaLabelStyle}" Content="{Binding Path=Nome}"/>
-                        <Label FontSize="14" Foreground="Wheat" Content="{Binding Path=Morada}"/>
+                        <Label FontSize="13" Foreground="Wheat" Content="{Binding Path=Morada}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
