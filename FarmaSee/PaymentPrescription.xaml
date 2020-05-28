@@ -1,0 +1,103 @@
+﻿<Page x:Class="FarmaSee.PaymentPrescription"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FarmaSee"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PaymentPrescription" Height="700" Width="414">
+
+    <Grid Background="#00517C">
+        <Rectangle Fill="#F9F9F9"   Height="66" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
+
+        <Label Style="{StaticResource TitulolabelStyle}">Payment</Label>
+
+        <Grid Margin="0,60,0,70">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.2*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
+                <RowDefinition Height="0.4*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Background="#196289" Margin="0,0,0,10">
+                <Label Content="Purchase List" HorizontalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" />
+                <ListBox x:Name="Medicines" Background="Transparent" Height="275">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Style="{StaticResource ListItemStyle}" Width="400">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="260"/>
+                                        <ColumnDefinition Width="33"/>
+                                        <ColumnDefinition Width="33"/>
+                                        <ColumnDefinition Width="33"/>
+                                        <ColumnDefinition Width="33"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0">
+                                        <Label Content="{Binding Path=Nome}" Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black" Margin="0,13"></Label>
+                                    </StackPanel>
+                                    <Label Name="quantityLabel" Content="{Binding Path=Quantidade}" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
+                                    <materialDesign:PackIcon Kind="RemoveCircle" MouseUp="PackIcon_MouseUp" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
+                                </Grid>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Background="#196289" Margin="0,0,0,10">
+                <Label Content="Delivery" HorizontalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" Margin="0,0,0,20"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <RadioButton x:Name="atHomeBt" GroupName="delivery" Grid.Column="0" Content="At home" Style="{StaticResource RadioButtonStyle}"></RadioButton>
+                    <RadioButton x:Name="pickupBt" GroupName="delivery" Grid.Column="1" Content="Pick up" Style="{StaticResource RadioButtonStyle}"></RadioButton>
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Background="#196289" Margin="0,0,0,10">
+                <WrapPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,0,0,20">
+                    <Image Width="20" Height="20" Source="payment_icon.png"/>
+                    <Label Content="Payment" Foreground="White" FontWeight="DemiBold" FontSize="20" />
+                </WrapPanel>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <RadioButton x:Name="mbWay" GroupName="payment" Grid.Column="0" Content="MB Way" Style="{StaticResource RadioButtonStyle}"></RadioButton>
+                    <RadioButton x:Name="atDelivery" GroupName="payment" Grid.Column="1" Content="At delivery" Style="{StaticResource RadioButtonStyle}" Margin="65,0,26,0" VerticalAlignment="Top" Width="116"></RadioButton>
+                </Grid>
+            </StackPanel>
+            <StackPanel Background="#196289" Margin="0,7,0,10" Grid.Row="3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <Label Content="Select pharmacy" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" Margin="10,0,0,20" Width="160"/>
+              
+                <Button x:Name="ButtonOpenMenu" HorizontalAlignment="Right" Width="30" Height="30" Background="{x:Null}" Margin="0,-70,12,0" BorderBrush="{x:Null}" VerticalAlignment="Center" Click="ButtonPharmacy_Click">
+                    <materialDesign:PackIcon Foreground="#A7A7A7" Kind="Pharmacy" Height="22" Width="23"/>
+                </Button>
+            </StackPanel>
+            <Label Name="selectFarmacia" FontSize="17" FontWeight="DemiBold" Foreground="Wheat" Grid.Row="3" Margin="8,41,0,13"/>
+        </Grid>
+
+        <Grid Margin="0,650,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Cancel" Foreground="Red" Style="{StaticResource PaymentButtonsStyle2}" Click="Button_Click"></Button>
+            <Button Grid.Column="1" Content="Order" Foreground="Blue"  Style="{StaticResource PaymentButtonsStyle2}" Click="Button_Click_1"></Button>
+        </Grid>
+    </Grid>
+</Page>

@@ -22,13 +22,15 @@ namespace FarmaSee
     public partial class MainWindow : NavigationWindow
     {
         private static ListaFarmacias _farmacias;
-        private static ListaCompras _compras;
+        private static ListaHistorico _historico;
+        private static Prescription _prescricao;
 
         public MainWindow()
         {
             InitializeComponent();
             _farmacias = new ListaFarmacias();
-            _compras = new ListaCompras();
+            _historico = new ListaHistorico();
+            _prescricao = new Prescription();
         }
 
         public static ListaFarmacias Farmacias
@@ -40,16 +42,20 @@ namespace FarmaSee
             _farmacias.Add(f);
         }
 
-        public static ListaCompras Compras
+        public static ListaHistorico Historico
         {
-            get { return _compras; }
+            get { return _historico; }
         }
-        public static void AddCompra(Compra f)
+        public static void AddHistorico(Historico f)
         {
-            _compras.Add(f);
+            _historico.Add(f);
         }
 
-
+        public static Prescription Prescricao
+        {
+            get { return _prescricao; }
+            set { _prescricao = value; }
+        }
 
     }
 }

@@ -21,7 +21,7 @@
             <StackPanel Grid.Row="0" Background="#196289" Margin="0,0,0,10">
                 <Label Content="Purchase List" HorizontalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" />
                 <ListBox x:Name="Medicines" Background="Transparent" Height="275">
-                    <ListBoxItem Style="{StaticResource ListItemStyle}" >
+                    <ListBoxItem Style="{StaticResource ListItemStyle2}" >
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="260"/>
@@ -41,7 +41,7 @@
                         </Grid>
                     </ListBoxItem>
 
-                    <ListBoxItem Style="{StaticResource ListItemStyle}" >
+                    <ListBoxItem Style="{StaticResource ListItemStyle2}" >
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="260"/>
@@ -61,7 +61,7 @@
                         </Grid>
                     </ListBoxItem>
 
-                    <ListBoxItem Style="{StaticResource ListItemStyle}" >
+                    <ListBoxItem Style="{StaticResource ListItemStyle2}" >
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="260"/>
@@ -81,7 +81,7 @@
                         </Grid>
                     </ListBoxItem>
 
-                    <ListBoxItem Style="{StaticResource ListItemStyle}" >
+                    <ListBoxItem Style="{StaticResource ListItemStyle2}" >
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="260"/>
@@ -101,7 +101,7 @@
                         </Grid>
                     </ListBoxItem>
 
-                    <ListBoxItem Style="{StaticResource ListItemStyle}" >
+                    <ListBoxItem Style="{StaticResource ListItemStyle2}" >
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="260"/>
@@ -146,8 +146,8 @@
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <RadioButton GroupName="payment" Grid.Column="0" Content="MB Way" Style="{StaticResource RadioButtonStyle}"></RadioButton>
-                    <RadioButton GroupName="payment" Grid.Column="1" Content="At delivery" Style="{StaticResource RadioButtonStyle}" Margin="65,0,26,0" VerticalAlignment="Top" Width="116"></RadioButton>
+                    <RadioButton x:Name="mbWay" GroupName="payment" Grid.Column="0" Content="MB Way" Style="{StaticResource RadioButtonStyle}"></RadioButton>
+                    <RadioButton x:Name="atDelivery" GroupName="payment" Grid.Column="1" Content="At delivery" Style="{StaticResource RadioButtonStyle}" Margin="65,0,26,0" VerticalAlignment="Top" Width="116"></RadioButton>
                 </Grid>
             </StackPanel>
         </Grid>

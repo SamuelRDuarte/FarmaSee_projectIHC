@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 
 namespace FarmaSee
 {
-    public class Compra
+    public class Historico
     {
         private string _medicamento;
         private string _farmacia;
@@ -41,14 +41,14 @@ namespace FarmaSee
         }
     }
 
-    public class ListaCompras : ObservableCollection<Compra>
+    public class ListaHistorico : ObservableCollection<Historico>
     {
-        public ListaCompras()
+        public ListaHistorico()
         {
-            Add(new Compra { Medicamento = "Lisinopril 5mg", Farmacia = "Farmácia Oudinot", Data="14/05/2020" });
-            Add(new Compra { Medicamento = "Ferro-Tardyferon 80mg", Farmacia = "Farmácia Nova", Data = "12/02/2020" });
-            Add(new Compra { Medicamento = "Voltaren Gel", Farmacia = "Farmácia Nova", Data = "12/02/2020" });
-            Add(new Compra { Medicamento = "Aspirina C 500 mg", Farmacia = "Farmácia Oudinot", Data = "18/12/2019" });
+            Add(new Historico { Medicamento = "Lisinopril 5mg", Farmacia = "Farmácia Oudinot", Data="14/05/2020" });
+            Add(new Historico { Medicamento = "Ferro-Tardyferon 80mg", Farmacia = "Farmácia Nova", Data = "12/02/2020" });
+            Add(new Historico { Medicamento = "Voltaren Gel", Farmacia = "Farmácia Nova", Data = "12/02/2020" });
+            Add(new Historico { Medicamento = "Aspirina C 500 mg", Farmacia = "Farmácia Oudinot", Data = "18/12/2019" });
 
         }
     }
@@ -61,7 +61,7 @@ namespace FarmaSee
         public History()
         {
             InitializeComponent();
-            ListBoxHistórico.ItemsSource = MainWindow.Compras;
+            ListBoxHistórico.ItemsSource = MainWindow.Historico;
         }
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
@@ -82,17 +82,17 @@ namespace FarmaSee
 
         private void TexBoxSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            ObservableCollection<Compra> lista;
+            ObservableCollection<Historico> lista;
 
             if (TexBoxSearch.Text.Length > 2)
             {
-                lista = new ObservableCollection<Compra>(MainWindow.Compras.ToList().FindAll(fa =>
+                lista = new ObservableCollection<Historico>(MainWindow.Historico.ToList().FindAll(fa =>
                                                                        fa.Medicamento.ToLower().Contains(TexBoxSearch.Text.ToLower()) || fa.Farmacia.ToLower().Contains(TexBoxSearch.Text.ToLower())));
                 ListBoxHistórico.ItemsSource = lista;
             }
             else
             {
-                ListBoxHistórico.ItemsSource = MainWindow.Compras;
+                ListBoxHistórico.ItemsSource = MainWindow.Historico;
             }
         }
     }

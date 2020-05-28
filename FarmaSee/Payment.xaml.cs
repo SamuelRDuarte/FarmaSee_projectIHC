@@ -32,8 +32,15 @@ namespace FarmaSee
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Order order = new Order();
-            this.NavigationService.Navigate(order);
+            if (((bool)pickupBt.IsChecked || (bool)atHomeBt.IsChecked) && ((bool)mbWay.IsChecked || (bool)atDelivery.IsChecked))
+            {
+                Order order = new Order();
+                this.NavigationService.Navigate(order);
+            }
+            else
+            {
+                MessageBox.Show("Select a type of payment and delivery", "Erro", MessageBoxButton.OK);
+            }
         }
 
         private void plus_click(object sender, RoutedEventArgs e)

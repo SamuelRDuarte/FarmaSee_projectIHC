@@ -85,8 +85,20 @@ namespace FarmaSee
 
         private void ButtonKeySearch_Click(object sender, RoutedEventArgs e)
         {
-            Payment payment = new Payment();
-            this.NavigationService.Navigate(payment);
+            if(key_input.Text == "" || key_input.Text == "Key...")
+            {
+                MessageBox.Show("Insert medical prescription code", "Erro", MessageBoxButton.OK);
+            }
+            else if(key_input.Text != "1234")
+            {
+                MessageBox.Show("Insert a valid medical prescription code", "Erro", MessageBoxButton.OK);
+            }
+            else
+            {
+                PaymentPrescription payment = new PaymentPrescription(true);
+                this.NavigationService.Navigate(payment);
+            }
+            
         }
 
         private void enterPrescription(object sender, MouseButtonEventArgs e)
