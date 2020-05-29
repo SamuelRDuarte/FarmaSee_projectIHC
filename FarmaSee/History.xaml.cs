@@ -75,6 +75,7 @@ namespace FarmaSee
             TexBoxSearch.Text = "";
         }
 
+        // not working
         private void searchTextBox_LostFocus(object sender, RoutedEventArgs e)
         {
             TexBoxSearch.Text = " Search for medicine or pharmacy...";

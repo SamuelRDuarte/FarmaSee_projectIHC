@@ -17,14 +17,15 @@
         <!--<Grid.Resources>
             <local:ListaFarmacias x:Key="Farmacias"/>
         </Grid.Resources>-->
-        <Rectangle Fill="#F9F9F9"   Height="147" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
+        
+        <Rectangle Fill="#F9F9F9" Height="80" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
         <Label Style="{StaticResource TitulolabelStyle}" Margin="152,10,152,0" Content="Search"/>
-
-
         <Button Height="25" Width="60" Content="Cancel" VerticalAlignment="Top" Margin="20,22,334.4,0" Background="Transparent" BorderBrush="Transparent" Foreground="Tomato" FontSize="16" FontWeight="Medium" Click="Button_Click"/>
-        <TextBox Name="TexBoxSearch"  KeyUp="TexBoxSearch_KeyUp" GotFocus="searchTextBox_GotFocus" LostFocus="searchTextBox_LostFocus" Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search a farmacy..." BorderThickness="0" Background="LightGray" Foreground="Black"  Margin="78,78,70,0"/>
+        
+        <!--<TextBox Name="TexBoxSearch"  KeyUp="TexBoxSearch_KeyUp" GotFocus="searchTextBox_GotFocus" LostFocus="searchTextBox_LostFocus" Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search a farmacy..." BorderThickness="0" Background="LightGray" Foreground="Black"  Margin="78,78,70,0"/>-->
+        <TextBox Name="TexBoxSearch" KeyUp="TexBoxSearch_KeyUp" GotFocus="searchTextBox_GotFocus" LostFocus="searchTextBox_LostFocus" Template="{StaticResource SearchBoxTemplate}" BorderThickness="2,2,2,2" HorizontalAlignment="Center" Height="35" TextWrapping="Wrap" Text=" Search a farmacy..." FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="309" Margin="45,86,40.4,0" Background="#00517C" Foreground="#A7A7A7"/>
 
-        <Label Content="Please select a farmacy." Margin="10,118,270,593"/>
+        <Label Content="Please select a farmacy." Margin="10,118,270,593" Foreground="White"/>
 
         <ListBox x:Name="FarmaciasListBox" BorderThickness="0" MouseDoubleClick="ListBoxItem_MouseDoubleClick"  Background="Transparent" Margin="0,148,0,0.4" >
             <ListBox.ItemTemplate>
