@@ -21,7 +21,31 @@
             <StackPanel Grid.Row="0" Background="#196289" Margin="0,0,0,10">
                 <Label Content="Purchase List" HorizontalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" />
                 <ListBox x:Name="Medicines" Background="Transparent" Height="275">
-                    <ListBoxItem Style="{StaticResource ListItemStyle2}" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Style="{StaticResource ListItemStyle}" Width="400">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="260"/>
+                                        <ColumnDefinition Width="33"/>
+                                        <ColumnDefinition Width="33"/>
+                                        <ColumnDefinition Width="33"/>
+                                        <ColumnDefinition Width="33"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Column="0">
+                                        <Label Style="{StaticResource FarmaciaLabelStyle}" Content="{Binding Path=Nome}" Foreground="Black"></Label>
+                                    </StackPanel>
+                                    <Button Name="plusButton" Tag="{Binding Path=Nome}" Content="+" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
+                                    <Label Name="quantityLabel" Content="{Binding Path=Quantidade}" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
+                                    <Button Name="minusButton" Tag="{Binding Path=Nome}" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
+                                    <Button Grid.Column="4" Background="Transparent" BorderThickness="0" Tag="{Binding Path=Nome}" Click="ButtonDelete_Click" Margin="0,0,0,0">
+                                        <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
+                                    </Button>
+                                </Grid>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    <!--<ListBoxItem Style="{StaticResource ListItemStyle2}" >
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="260"/>
@@ -35,9 +59,11 @@
                             </StackPanel>
                             <Button Name="plusButton" Content="+" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
                             <Label Name="quantityLabel" Content="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
-                            <Button Name="minusButton" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
-                            <!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>-->
-                            <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
+                            <Button Name="minusButton" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click" Margin="0,0,0,0"/>
+                            --><!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>--><!--
+                            <Button Grid.Column="4" Background="Transparent" BorderThickness="0" Width="23" Height="28" Margin="-10,0,0,0">
+                                <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28"  VerticalAlignment="Center" Margin="1,2,0,1"/>
+                            </Button>
                         </Grid>
                     </ListBoxItem>
 
@@ -56,7 +82,7 @@
                             <Button Name="plusButton2" Content="+" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
                             <Label Name="quantityLabel2" Content="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
                             <Button Name="minusButton2" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
-                            <!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>-->
+                            --><!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>--><!--
                             <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
                         </Grid>
                     </ListBoxItem>
@@ -76,7 +102,7 @@
                             <Button Name="plusButton3" Content="+" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
                             <Label Name="quantityLabel3" Content="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
                             <Button Name="minusButton3" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
-                            <!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>-->
+                            --><!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>--><!--
                             <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
                         </Grid>
                     </ListBoxItem>
@@ -96,7 +122,7 @@
                             <Button Name="plusButton4" Content="+" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
                             <Label Name="quantityLabel4" Content="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
                             <Button Name="minusButton4" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
-                            <!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>-->
+                            --><!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>--><!--
                             <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
                         </Grid>
                     </ListBoxItem>
@@ -116,10 +142,10 @@
                             <Button Name="plusButton5" Content="+" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
                             <Label Name="quantityLabel5" Content="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
                             <Button Name="minusButton5" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
-                            <!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>-->
+                            --><!--<Image Grid.Column="4" Source="remove.png" Width="20"></Image>--><!--
                             <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
                         </Grid>
-                    </ListBoxItem>
+                    </ListBoxItem>-->
                 </ListBox>
             </StackPanel>
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -26,6 +27,7 @@ namespace FarmaSee
         private static ListaHistorico _historico;
         private static Prescription _prescricao;
         private static ListMedicamento _medicamentos;
+        private static ObservableCollection<Medicamento> _shopList;
 
         public MainWindow()
         {
@@ -34,6 +36,7 @@ namespace FarmaSee
             _historico = new ListaHistorico();
             _prescricao = new Prescription();
             _medicamentos = new ListMedicamento();
+            _shopList = new ObservableCollection<Medicamento>();
         }
 
         public static ListaFarmacias Farmacias
@@ -63,6 +66,11 @@ namespace FarmaSee
         public static ListMedicamento Medicamentos
         {
             get { return _medicamentos; }
+        }
+
+        public static ObservableCollection<Medicamento> ShopList
+        {
+            get { return _shopList; }
         }
     }
 }

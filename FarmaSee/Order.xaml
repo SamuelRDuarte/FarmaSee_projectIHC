@@ -7,7 +7,10 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Order" Height="700" Width="414">
-
+    <Page.Resources>
+        
+        <materialDesign:PackIcon Kind="ShoppingCartMinus" x:Key="Remove"></materialDesign:PackIcon>
+    </Page.Resources>
     <Grid Margin="10,0,10,10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" MaxHeight="130" MinHeight="128.8" />
@@ -19,7 +22,7 @@
                 <GradientStop Color="#00293F" Offset="1.0" />
             </LinearGradientBrush>
         </Grid.Background>
-        
+
         <Rectangle Fill="#F9F9F9"   Height="77" Margin="0,0,0.4,0" Stroke="Transparent" VerticalAlignment="Top"/>
         <Label Style="{StaticResource TitulolabelStyle}" Grid.Row="0" Content="Order"  HorizontalContentAlignment="Center" Margin="152,14,152,0" RenderTransformOrigin="0.86,0.562" HorizontalAlignment="Stretch"/>
         <Image Source="menu.png" Grid.Column="0" Margin="20,26,340,73"  Stretch="Fill" MouseUp="Image_MouseUp" />
@@ -45,13 +48,11 @@
                                     <ColumnDefinition Width="114.787"/>
                                     <ColumnDefinition Width="28.413"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Text="{Binding Path=Nome}" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#D3D3D3" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="170"/>
+                                <TextBlock Text="{Binding Path=Nome}" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Wheat" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="170"/>
                                 <Image Source="{Binding Path=Imagem}" Stretch="Fill" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="77" Grid.Column="1" Margin="24,10,13.787,5.4"/>
-                                <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                    <CheckBox.LayoutTransform>
-                                        <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
-                                    </CheckBox.LayoutTransform>
-                                </CheckBox>
+                                <Button Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="ButtonAddShp_Click" Tag="{Binding Path=Nome}">
+                                    <materialDesign:PackIcon Kind="ShoppingCartArrowDown" Name="icon"></materialDesign:PackIcon>
+                                </Button>
                             </Grid>
 
                         </StackPanel>
@@ -102,28 +103,50 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </ListView.RenderTransform>
-                <ListViewItem Height="60">
-                    <StackPanel Orientation="Horizontal" Width="323">
-                        <Grid HorizontalAlignment="Stretch" Width="323">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Width="323" Height="60">
+                            <Grid HorizontalAlignment="Stretch" Width="323">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="180"/>
+                                    <ColumnDefinition Width="114.787"/>
+                                    <ColumnDefinition Width="28.413"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Path=Nome}" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Wheat" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="170"/>
+                                <Image Source="{Binding Path=Imagem}" Stretch="Fill" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="77" Grid.Column="1" Margin="24,10,13.787,5.4"/>
+                                <Button Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="ButtonAddShp_Click" Tag="{Binding Path=Nome}">
+                                    <materialDesign:PackIcon Kind="ShoppingCartArrowDown" Name="icon"></materialDesign:PackIcon>
+                                </Button>
+                            </Grid>
+
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+               <!--<ListViewItem Height="60">
+                    <StackPanel Orientation="Horizontal" Width="331">
+                        <Grid HorizontalAlignment="Stretch" Width="331">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition Width="160"/>
                                 <ColumnDefinition Width="114.787"/>
-                                <ColumnDefinition Width="28.413"/>
+                                <ColumnDefinition Width="27"/>
+                                <ColumnDefinition Width="29"/>
+                                <ColumnDefinition Width="30"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="Fenistil Gel" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#D3D3D3" FontSize="16" Margin="0,15,0,15.4" Height="25" Width="170"/>
-                            <Image Source="fenistil-gel-300x300.jpg" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill" Height="42"  Width="83" Grid.Column="1" Margin="18,0,13.4,4.4"/>
-                            <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <CheckBox.LayoutTransform>
-                                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
-                                </CheckBox.LayoutTransform>
-                            </CheckBox>
+                            <TextBlock Text="Fenistil Gel" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Wheat" FontSize="16" Margin="0,15" Height="25" Width="170" Grid.ColumnSpan="2"/>
+                            <Image Source="fenistil-gel-300x300.jpg" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill" Height="42"  Width="83" Grid.Column="1" Margin="18,4,14,9"/>
+                            <Button Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="20" Margin="5,18,2,17" Width="20">
+                                <materialDesign:PackIcon Kind="ShoppingCartAdd"></materialDesign:PackIcon>
+                            </Button>
+                            <Button Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" Click="ButtonAddShp_Click" Tag="{Binding Path=Nome}" Height="20" Margin="8,18,1,17" Width="20">
+                                <materialDesign:PackIcon Kind="ShoppingCartMinus"></materialDesign:PackIcon>
+                            </Button>
 
                         </Grid>
 
                     </StackPanel>
-                </ListViewItem>
+                </ListViewItem>-->
 
-                <ListViewItem Height="60">
+                <!--<ListViewItem Height="60">
                     <StackPanel Orientation="Horizontal" Width="323">
                         <Grid HorizontalAlignment="Stretch" Width="323">
                             <Grid.ColumnDefinitions>
@@ -133,11 +156,9 @@
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="Fenistil Gel" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#D3D3D3" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="170"/>
                             <Image Source="caixa-avamys-m.jpg" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="1" Margin="31,4,28.4,5"/>
-                            <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <CheckBox.LayoutTransform>
-                                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
-                                </CheckBox.LayoutTransform>
-                            </CheckBox>
+                            <Button Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="ShoppingCartAdd"></materialDesign:PackIcon>
+                            </Button>
                         </Grid>
 
                     </StackPanel>
@@ -152,14 +173,12 @@
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="Fenergen Pomada" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="#D3D3D3" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="170"/>
                             <Image Source="3d-fenergan.jpg" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill" Grid.Column="1" Margin="25,5,22.4,5" Height="46" Width="67"/>
-                            <CheckBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                <CheckBox.LayoutTransform>
-                                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
-                                </CheckBox.LayoutTransform>
-                            </CheckBox>
+                            <Button Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <materialDesign:PackIcon Kind="ShoppingCartAdd"></materialDesign:PackIcon>
+                            </Button>
                         </Grid>
                     </StackPanel>
-                </ListViewItem>
+                </ListViewItem>-->
 
 
             </ListView>
@@ -171,8 +190,8 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-            </Grid>     
-            
+            </Grid>
+
             <Label Content="Select pharmacy" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" Margin="10,0,0,20" Width="160"/>
 
             <Button x:Name="ButtonOpenMenu" HorizontalAlignment="Right" Width="30" Height="30" Background="{x:Null}" Margin="0,-70,12,0" BorderBrush="{x:Null}" VerticalAlignment="Center" Click="ButtonPharmacy_Click">
@@ -180,7 +199,7 @@
             </Button>
         </StackPanel>
         <Label Name="selectFarmacia" FontSize="17" FontWeight="DemiBold" Foreground="Wheat" Margin="13,461,14,70" Grid.Row="1"/>
-        
+
         <Button Content="Payment" Foreground="MediumBlue"   Style="{StaticResource PaymentButtonsStyle2}" Margin="90,508,90,18" Grid.Row="1" Width="Auto" Click="ButtonPayment_Click"/>
 
         <!--<ListBox Name="Histórico" Grid.Row="1" Background="Transparent"/>-->

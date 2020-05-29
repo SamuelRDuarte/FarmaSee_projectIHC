@@ -22,6 +22,7 @@ namespace FarmaSee
         public Payment()
         {
             InitializeComponent();
+            Medicines.ItemsSource = MainWindow.ShopList;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -39,31 +40,43 @@ namespace FarmaSee
             }
             else
             {
-                MessageBox.Show("Select a type of payment and delivery", "Erro", MessageBoxButton.OK);
+                MessageBox.Show("Select a type of payment and delivery", "Error", MessageBoxButton.OK);
             }
         }
 
         private void plus_click(object sender, RoutedEventArgs e)
         {
-            int quant = Convert.ToInt32(quantityLabel.Content);
-            quantityLabel.Content = (quant + 1).ToString();
-            minusButton.IsEnabled = true;
+            string nome = ((Button)sender).Tag.ToString();
+            Medicamento med = MainWindow.ShopList.ToList().Find(x => x.Nome == nome);
+            MainWindow.ShopList.Remove(med);
+            med.Quantidade++;
+            MainWindow.ShopList.Add(med);
+            Medicines.ItemsSource = MainWindow.ShopList;
         }
 
         private void minus_click(object sender, RoutedEventArgs e)
         {
-            int quant = Convert.ToInt32(quantityLabel.Content);
-            int result = quant - 1;
-
-            if (result == 0)
+            string nome = ((Button)sender).Tag.ToString();
+            Medicamento med = MainWindow.ShopList.ToList().Find(x => x.Nome == nome);
+            if(med.Quantidade > 1)
             {
-                minusButton.IsEnabled = false;
-                quantityLabel.Content = result.ToString();
+                MainWindow.ShopList.Remove(med);
+                med.Quantidade--;
+                MainWindow.ShopList.Add(med);
+                Medicines.ItemsSource = MainWindow.ShopList;
             }
             else
             {
-                quantityLabel.Content = result.ToString();
+                MessageBox.Show("Quantity can't be less than 1", "Error");
             }
+            
+        }
+
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            string nome = ((Button)sender).Tag.ToString();
+            MainWindow.ShopList.Remove(MainWindow.ShopList.ToList().Find(x => x.Nome == nome));
+            Medicines.ItemsSource = MainWindow.ShopList;
         }
     }
 }
