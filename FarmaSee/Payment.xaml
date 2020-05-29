@@ -7,11 +7,11 @@
       mc:Ignorable="d"
         Title="Payment" Height="700" Width="414">
     <Grid Background="#00517C">
-        <Rectangle Fill="#F9F9F9"   Height="66" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
+        <Rectangle Fill="#F9F9F9" Height="80" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
 
-        <Label Style="{StaticResource TitulolabelStyle}">Payment</Label>
+        <Label Style="{StaticResource TitulolabelStyle}" Margin="141,12,140.4,0">Payment</Label>
 
-        <Grid Margin="0,60,0,70">
+        <Grid Margin="0,80,0,70">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1.2*"></RowDefinition>
                 <RowDefinition Height="0.5*"></RowDefinition>

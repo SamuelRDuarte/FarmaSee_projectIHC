@@ -23,7 +23,7 @@
         <Image Source="logo.png" Height="226" Margin="86,79,86,0" VerticalAlignment="Top"/>
         <TextBox Height="23" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Margin="114,379,114,0"/>
         <TextBox Height="23" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Margin="114,437,114,0"/>
-        <Button Content="Entrar" Style="{StaticResource ButtonLogin}" Margin="132,537,132,0" VerticalAlignment="Top" Height="42" RenderTransformOrigin="0.611,0.489" Click="Button_Click"/>
+        <Button Content="Login" Style="{StaticResource ButtonLogin}" Margin="132,537,132,0" VerticalAlignment="Top" Height="42" RenderTransformOrigin="0.611,0.489" Click="Button_Click"/>
         <Button Style="{StaticResource ButtonTransparent}" Content="Register" HorizontalContentAlignment="Center" Margin="149,618,149,0" VerticalAlignment="Top" FontSize="20" Foreground="#60973D"   RenderTransformOrigin="0.562,0.2"/>
     </Grid>
 

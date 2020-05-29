@@ -46,20 +46,33 @@
                 <GradientStop Color="#00293F" Offset="1.0" />
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox Name="search_textbox" Template="{StaticResource SearchBoxTemplate}" HorizontalAlignment="Center" Height="35" TextWrapping="Wrap" Text=" Search.." FontSize="21" VerticalAlignment="Top" Width="309" Margin="36,190,49,0" Background="#00517C" Foreground="#A7A7A7" GotFocus="searchTextBox_GotFocus" LostFocus="searchTextBox_LostFocus" />
-        <Label Content="Welcome" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="94,40,89,0" VerticalAlignment="Top" Width="211" FontSize="48" Foreground="#60973D"   RenderTransformOrigin="0.562,0.2" Height="66"/>
-        <Label Content="Search what you need" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="94,147,89,0" VerticalAlignment="Top" Width="211" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>
-        <Label Content="OR" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="170,249,164,0" VerticalAlignment="Top" Width="60" FontSize="19" FontWeight="Bold" Foreground="#A7A7A7" RenderTransformOrigin="0.562,0.2" Height="35"/>
-        <TextBox Name="key_input" Template="{StaticResource ResourceKey=SearchBoxTemplate}" HorizontalAlignment="Center" BorderThickness="0,0,0,1" Height="35" TextWrapping="Wrap" Text="Key..." FontSize="18" VerticalAlignment="Top" Width="261" Margin="70,356,63,0" Background="#00517C" Foreground="#A7A7A7" GotFocus="keyTextBox_GotFocus" />
-        <Label Content="Insert medical prescription code:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="60,308,49,0" VerticalAlignment="Top" Width="285" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>
-        <Border BorderBrush="#60973D" BorderThickness="0,0,0,1" HorizontalAlignment="Center" Height="100" Margin="117,417,120.4,0" VerticalAlignment="Top" Width="157" />
-        <Border HorizontalAlignment="Center" BorderBrush="#60973D" BorderThickness="0,0,0,1"  Height="48" Margin="117,598,120.4,0" VerticalAlignment="Top" Width="157" >
-            <Label Content="Pending Pick-Ups:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,10,-3.2,-0.8" VerticalAlignment="Top" Width="160" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="38"/>
-        </Border>
-        <Label Content="Pending Deliveries:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="113,475,114,0" VerticalAlignment="Top" Width="167" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>
+
+        <Label Content="Welcome" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="94,15,89.4,0" VerticalAlignment="Top" Width="211" FontSize="48" Foreground="#60973D"   RenderTransformOrigin="0.562,0.2" Height="66"/>
+
+        <!--<Label Content="Search what you need" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="94,147,89,0" VerticalAlignment="Top" Width="211" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>-->
+        <Label Content="Search what you need" Style="{StaticResource HomeTitulolabelStyle}" Margin="82,152,100.4,541" Width="212"></Label>
+        <TextBox Name="search_textbox" Template="{StaticResource SearchBoxTemplate}" BorderThickness="2,2,2,2" HorizontalAlignment="Center" Height="35" TextWrapping="Wrap" Text=" Search.." FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="309" Margin="36,190,49,0" Background="#00517C" Foreground="#A7A7A7" GotFocus="searchTextBox_GotFocus" LostFocus="searchTextBox_LostFocus" />
+
+        <!--<Label Content="OR" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="170,249,164,0" VerticalAlignment="Top" Width="60" FontSize="19" FontWeight="Bold" Foreground="#A7A7A7" RenderTransformOrigin="0.562,0.2" Height="35"/>-->
+
+        <!--<Label Content="Insert medical prescription code:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="60,308,49,0" VerticalAlignment="Top" Width="285" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>-->
+        <Label Content="Insert medical prescription code:" Style="{StaticResource HomeTitulolabelStyle}" Margin="46,315,24.4,375" Width="324"/>
+        <TextBox Name="key_input" Template="{StaticResource ResourceKey=SearchBoxTemplate}" HorizontalAlignment="Center" BorderThickness="2,2,2,2" Height="35" TextWrapping="Wrap" Text=" Key..." FontSize="18" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="261" Margin="70,356,63,0" Background="#00517C" Foreground="#A7A7A7" GotFocus="keyTextBox_GotFocus" />
+
+        <Label Content="Pending Deliveries:" Style="{StaticResource HomeTitulolabelStyle}" Margin="104,479,107.4,201" Width="183"/>
+        <Border BorderBrush="#60973D" BorderThickness="0,0,0,5" HorizontalAlignment="Center" Height="2" Margin="86,517,88.4,0" VerticalAlignment="Top" Width="220" />
+
+
+        <!--<Label Content="Pending Pick-Ups:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,10,-3.2,-0.8" VerticalAlignment="Top" Width="160" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="38"/>-->
+        <Label Content="Pending Pick-Ups:" Style="{StaticResource HomeTitulolabelStyle}" Margin="109,598,100.4,92" Width="185"/>
+        <Border BorderBrush="#60973D" BorderThickness="0,0,0,5" HorizontalAlignment="Center" Height="2" Margin="85,637,89.4,0" VerticalAlignment="Top" Width="220" />
+
+
         <Label Content="1x Brufen 600" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,532,10,0" VerticalAlignment="Top" Width="374" FontSize="19" Foreground="White" RenderTransformOrigin="0.562,0.2" Height="61" Opacity="0.8" BorderThickness="0"/>
         <TextBlock HorizontalAlignment="Center" Foreground="Wheat" Margin="15,567,0,0" TextWrapping="Wrap" Text="(from Farmácia Moderna, ETA: 7 hours and 13 minutes)" VerticalAlignment="Top" Opacity="0.8" />
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="61" Margin="10,532,0,0"  VerticalAlignment="Top" Width="374" Opacity="0.1"/>
+
+
         <Label Content="1x Voltaren Gel" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,655,10,0" VerticalAlignment="Top" Width="374" FontSize="19" Foreground="White" RenderTransformOrigin="0.562,0.2" Height="61" Opacity="0.8" BorderThickness="0"/>
         <TextBlock HorizontalAlignment="Center" Foreground="Wheat" Margin="15,690,0,0" TextWrapping="Wrap" Text="(from Farmácia Oudinot)" VerticalAlignment="Top" Opacity="0.8" />
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="61" Margin="10,651,0,0" VerticalAlignment="Top" Width="374" Opacity="0.1"/>
@@ -151,7 +164,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="28"/>
                 </Grid.ColumnDefinitions>
-                <materialDesign:PackIcon Kind="Search" Width="25" Height="25" VerticalAlignment="Center" Margin="1" Foreground="#A7A7A7" MouseUp="search"/>
+                <materialDesign:PackIcon Kind="Search" Width="25" Height="25" VerticalAlignment="Center" Margin="1,1,0,0.4" Foreground="#A7A7A7" MouseUp="search"/>
             </Grid>
         </Button>
         <Button Background="#00517C" BorderThickness="0" Click="ButtonKeySearch_Click" Margin="292,358,67.4,338">
@@ -162,7 +175,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="28"/>
                 </Grid.ColumnDefinitions>
-                <materialDesign:PackIcon Kind="Search" Width="25" Height="25" VerticalAlignment="Center" Margin="1,1,0,0.4" Foreground="#A7A7A7" MouseUp="enterPrescription"/>
+                <materialDesign:PackIcon Kind="Search" Width="25" Height="25" VerticalAlignment="Center" Margin="0,1,0,0.4" Foreground="#A7A7A7" MouseUp="enterPrescription"/>
             </Grid>
         </Button>
 

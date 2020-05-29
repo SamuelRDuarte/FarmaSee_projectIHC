@@ -130,6 +130,14 @@
             <Setter Property="FontWeight" Value="Bold"></Setter>
         </Style>
 
+        <Style x:Key="HomeTitulolabelStyle" TargetType="{x:Type Label}">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="FontWeight" Value="Medium"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+        </Style>
+
         <ControlTemplate x:Key="SearchBoxTemplate" TargetType="{x:Type TextBoxBase}">
             <Border Background="{TemplateBinding Background}" 
                 x:Name="Bd" BorderBrush="#60973D"

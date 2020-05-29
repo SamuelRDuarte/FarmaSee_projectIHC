@@ -9,23 +9,25 @@
       Title="History" Height="700" Width="414">
 
     <Grid Margin="10,0,10,10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" MaxHeight="130" MinHeight="130" />
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MaxHeight="130" MinHeight="126.4" />
             <RowDefinition/>
-        </Grid.RowDefinitions>
+        </Grid.RowDefinitions>-->
         <Grid.Background>
             <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                 <GradientStop Color="#00517C" Offset="0.6" />
                 <GradientStop Color="#00293F" Offset="1.0" />
             </LinearGradientBrush>
         </Grid.Background>
-        <Rectangle Fill="#F9F9F9"   Height="130" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
-        <Label Grid.Row="0" Style="{StaticResource TitulolabelStyle}" Content="History"  HorizontalContentAlignment="Center" Margin="131,18,131,0" HorizontalAlignment="Stretch"/>
-        <TextBox Name="TexBoxSearch" KeyUp="TexBoxSearch_KeyUp" GotFocus="searchTextBox_GotFocus" LostFocus="searchTextBox_LostFocus" Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search for medicine or pharmacy..." FontSize="16" BorderThickness="0" Background="LightGray" Foreground="Black"  Margin="71,78,29,0" Width="294" Height="37" />
 
-        <Image Source="menu.png"  Grid.Column="0" Margin="22,80,335,16"  Stretch="Fill" MouseUp="Image_MouseUp" />
-
-        <ListBox Name="ListBoxHistórico" Grid.Row="1" Background="Transparent">
+        <Rectangle Fill="#F9F9F9" Height="80" Margin="0,0,0.4,0" Stroke="Transparent" VerticalAlignment="Top"/>
+        <Image Source="menu.png" Margin="20,27,337.4,632"  Stretch="Fill" MouseUp="Image_MouseUp" />
+        <Label Style="{StaticResource TitulolabelStyle}" Content="History"  HorizontalContentAlignment="Center" Margin="131,18,131.4,0" HorizontalAlignment="Stretch" Height="50"/>
+        
+        <!--<TextBox Name="TexBoxSearch" KeyUp="TexBoxSearch_KeyUp" GotFocus="searchTextBox_GotFocus" LostFocus="searchTextBox_LostFocus" Template="{StaticResource SearchBoxTemplate}" Style="{StaticResource SearchBoxStyle}" Text=" Search for medicine or pharmacy..." FontSize="16" BorderThickness="0" Background="LightGray" Foreground="Black"  Margin="59,153,41.4,0" Width="294" Height="37" />-->
+        <TextBox Name="TexBoxSearch" KeyUp="TexBoxSearch_KeyUp" GotFocus="searchTextBox_GotFocus" LostFocus="searchTextBox_LostFocus" Template="{StaticResource SearchBoxTemplate}" BorderThickness="2,2,2,2" HorizontalAlignment="Center" Height="35" TextWrapping="Wrap" Text=" Search for medicine or pharmacy..." FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="309" Margin="45,86,40.4,0" Background="#00517C" Foreground="#A7A7A7"/>
+        
+        <ListBox Name="ListBoxHistórico" Background="Transparent" Margin="0,126,0.4,0.4" Grid.RowSpan="2">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Style="{StaticResource SearchItemStyle}" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,-1,0">
