@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +19,28 @@ namespace FarmaSee
     /// <summary>
     /// Interaction logic for History.xaml
     /// </summary>
+    
+    public class ListMedicamento : ObservableCollection<Medicamento>
+    {
+        public ListMedicamento()
+        {
+            Add(new Medicamento { Nome = "Voltaren Gel", Quantidade = 1, Imagem = "voltaren.png" });
+            Add(new Medicamento { Nome = "Aspirina C 500 mg", Quantidade = 1, Imagem = "aspirina.jpg" });
+            Add(new Medicamento { Nome = "Fenistil Gel", Quantidade = 1, Imagem = "fenistil-gel-300x300.jpg" });
+            Add(new Medicamento { Nome = "Fenistil Gel", Quantidade = 1, Imagem = "caixa-avamys-m.jpg" });
+            Add(new Medicamento { Nome = "Fenergen Pomada", Quantidade = 1, Imagem = "3d-fenergan.jpg" });
+            Add(new Medicamento { Nome = "Lisinopril 5 mg", Quantidade = 2, Imagem = "lisinopril.jpg" });
+            Add(new Medicamento { Nome = "Ferro-Tardyferon 80mg", Quantidade = 1, Imagem = "ferro.jpg" });
+
+        }
+    }
+
     public partial class Order : Page
     {
         public Order()
         {
             InitializeComponent();
+            Lista.ItemsSource=new ObservableCollection<Medicamento>(MainWindow.Medicamentos.ToList().GetRange(0, 2));
         }
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)

@@ -19,11 +19,13 @@ namespace FarmaSee
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+
     public partial class MainWindow : NavigationWindow
     {
         private static ListaFarmacias _farmacias;
         private static ListaHistorico _historico;
         private static Prescription _prescricao;
+        private static ListMedicamento _medicamentos;
 
         public MainWindow()
         {
@@ -31,6 +33,7 @@ namespace FarmaSee
             _farmacias = new ListaFarmacias();
             _historico = new ListaHistorico();
             _prescricao = new Prescription();
+            _medicamentos = new ListMedicamento();
         }
 
         public static ListaFarmacias Farmacias
@@ -57,5 +60,9 @@ namespace FarmaSee
             set { _prescricao = value; }
         }
 
+        public static ListMedicamento Medicamentos
+        {
+            get { return _medicamentos; }
+        }
     }
 }

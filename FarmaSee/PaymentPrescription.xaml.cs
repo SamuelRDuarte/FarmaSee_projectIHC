@@ -20,7 +20,8 @@ namespace FarmaSee
     public class Medicamento
     {
         private string _nome;
-        private string _quantidade;
+        private int _quantidade;
+        private string _imagem;
 
         public string Nome
         {
@@ -28,10 +29,16 @@ namespace FarmaSee
             set { _nome = value; }
         }
 
-        public string Quantidade
+        public int Quantidade
         {
             get { return _quantidade; }
             set { _quantidade = value; }
+        }
+
+        public string Imagem
+        {
+            get { return _imagem; }
+            set { _imagem = value; }
         }
     }
 
@@ -39,8 +46,8 @@ namespace FarmaSee
     {
         public Prescription()
         {
-            Add(new Medicamento { Nome = "Lisinopril 5 mg", Quantidade = "2" });
-            Add(new Medicamento { Nome = "Ferro-Tardyferon 80mg", Quantidade = "1" });
+            Add(new Medicamento { Nome = "Lisinopril 5 mg", Quantidade = 2 });
+            Add(new Medicamento { Nome = "Ferro-Tardyferon 80mg", Quantidade = 1 });
 
         }
     }
