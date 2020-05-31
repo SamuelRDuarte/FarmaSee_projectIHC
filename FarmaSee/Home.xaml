@@ -51,7 +51,7 @@
 
         <!--<Label Content="Search what you need" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="94,147,89,0" VerticalAlignment="Top" Width="211" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>-->
         <Label Content="Search what you need" Style="{StaticResource HomeTitulolabelStyle}" Margin="82,152,100.4,541" Width="212"></Label>
-        <TextBox Name="search_textbox" Template="{StaticResource SearchBoxTemplate}" BorderThickness="2,2,2,2" HorizontalAlignment="Center" Height="35" TextWrapping="Wrap" Text=" Search.." FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="309" Margin="36,190,49,0" Background="#00517C" Foreground="#A7A7A7" GotFocus="searchTextBox_GotFocus" LostFocus="searchTextBox_LostFocus" />
+        <TextBox Name="search_textbox" Template="{StaticResource SearchBoxTemplate}" BorderThickness="2,2,2,2" HorizontalAlignment="Center" Height="35" TextWrapping="Wrap" Text=" Search.." FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="309" Margin="36,190,49,0" Background="#00517C" Foreground="#A7A7A7" GotFocus="searchTextBox_GotFocus" />
 
         <!--<Label Content="OR" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="170,249,164,0" VerticalAlignment="Top" Width="60" FontSize="19" FontWeight="Bold" Foreground="#A7A7A7" RenderTransformOrigin="0.562,0.2" Height="35"/>-->
 
@@ -164,7 +164,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="28"/>
                 </Grid.ColumnDefinitions>
-                <materialDesign:PackIcon Kind="Search" Width="25" Height="25" VerticalAlignment="Center" Margin="1,1,0,0.4" Foreground="#A7A7A7" MouseUp="search"/>
+                <materialDesign:PackIcon Kind="Search" Width="25" Height="25" VerticalAlignment="Center" Margin="1,1,0,0.4" Foreground="#A7A7A7" />
             </Grid>
         </Button>
         <Button Background="#00517C" BorderThickness="0" Click="ButtonKeySearch_Click" Margin="292,358,67.4,338">

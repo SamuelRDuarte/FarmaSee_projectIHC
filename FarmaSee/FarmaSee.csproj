@@ -87,6 +87,9 @@
     <Compile Include="Order.xaml.cs">
       <DependentUpon>Order.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Order_Search.xaml.cs">
+      <DependentUpon>Order_Search.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Payment.xaml.cs">
       <DependentUpon>Payment.xaml</DependentUpon>
     </Compile>
@@ -139,6 +142,10 @@
     <Page Include="Menu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Order_Search.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Payment.xaml">
       <SubType>Designer</SubType>

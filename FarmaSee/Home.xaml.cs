@@ -79,8 +79,17 @@ namespace FarmaSee
 
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
-            Order order = new Order();
-            this.NavigationService.Navigate(order);
+            if(search_textbox.Text == "" || search_textbox.Text == " Search..")
+            {
+                Order order = new Order();
+                this.NavigationService.Navigate(order);
+            }
+            else
+            {
+                Order_Search order = new Order_Search(search_textbox.Text);
+                this.NavigationService.Navigate(order);
+            }
+            
         }
 
         private void ButtonKeySearch_Click(object sender, RoutedEventArgs e)
@@ -106,10 +115,6 @@ namespace FarmaSee
             this.NavigationService.Navigate(new Payment());
         }
 
-        private void search(object sender, MouseButtonEventArgs e)
-        {
-            NavigationService.Navigate(new Order());
-        }
 
         private void searchTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -131,6 +136,6 @@ namespace FarmaSee
             key_input.Text = "Key...";
         }
 
-       
+        
     }
 }

@@ -18,31 +18,17 @@ using System.Windows.Shapes;
 namespace FarmaSee
 {
     /// <summary>
-    /// Interaction logic for History.xaml
+    /// Interaction logic for Order_Search.xaml
     /// </summary>
-    
-    public class ListMedicamento : ObservableCollection<Medicamento>
+    public partial class Order_Search : Page
     {
-        public ListMedicamento()
-        {
-            Add(new Medicamento { Nome = "Voltaren Gel", Quantidade = 1, Imagem = "voltaren.png" });
-            Add(new Medicamento { Nome = "Aspirina C 500 mg", Quantidade = 1, Imagem = "aspirina.jpg" });
-            Add(new Medicamento { Nome = "Fenistil Gel", Quantidade = 1, Imagem = "fenistil-gel-300x300.jpg" });
-            Add(new Medicamento { Nome = "Avamys", Quantidade = 1, Imagem = "caixa-avamys-m.jpg" });
-            Add(new Medicamento { Nome = "Fenergen Pomada", Quantidade = 1, Imagem = "3d-fenergan.jpg" });
-            Add(new Medicamento { Nome = "Lisinopril 5 mg", Quantidade = 1, Imagem = "lisinopril.jpg" });
-            Add(new Medicamento { Nome = "Ferro-Tardyferon 80mg", Quantidade = 1, Imagem = "ferro.jpg" });
-
-        }
-    }
-
-    public partial class Order : Page
-    {
-        public Order()
+        public Order_Search(string pesquisa)
         {
             InitializeComponent();
-            Lista.ItemsSource=new ObservableCollection<Medicamento>(MainWindow.Medicamentos.ToList().GetRange(0, 2));
-            Lista1.ItemsSource = new ObservableCollection<Medicamento>(MainWindow.Medicamentos.ToList().GetRange(2, 3));
+            TexBoxSearch.Text = pesquisa;
+            Lista.ItemsSource = new ObservableCollection<Medicamento>(MainWindow.Medicamentos.ToList().GetRange(0, 2));
+            Lista1.ItemsSource = new ObservableCollection<Medicamento>(MainWindow.Medicamentos.ToList<Medicamento>().FindAll(fa =>
+                                                                       fa.Nome.ToLower().Contains(TexBoxSearch.Text.ToLower())));
         }
 
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
@@ -59,17 +45,17 @@ namespace FarmaSee
 
         private void ButtonPayment_Click(object sender, RoutedEventArgs e)
         {
-            if(selectFarmacia.Content == null && MainWindow.ShopList.Count > 0)
+            if (selectFarmacia.Content == null && MainWindow.ShopList.Count > 0)
             {
                 MessageBox.Show("Select a pharmacy", "Error", MessageBoxButton.OK);
             }
-            if (MainWindow.ShopList.Count <= 0)
+            else if (MainWindow.ShopList.Count <= 0)
                 MessageBox.Show("Shopping cart empty", "Error", MessageBoxButton.OK);
             else
             {
                 this.NavigationService.Navigate(new Payment());
             }
-            
+
         }
 
         private void ButtonAddShp_Click(object sender, RoutedEventArgs e)
@@ -88,5 +74,30 @@ namespace FarmaSee
             }
         }
 
+        private void searchTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TexBoxSearch.Text = "";
+        }
+
+        private void searchTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TexBoxSearch.Text = " Search...";
+        }
+
+        private void TexBoxSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            ObservableCollection<Medicamento> lista;
+
+            if (TexBoxSearch.Text.Length > 2)
+            {
+                lista = new ObservableCollection<Medicamento>(MainWindow.Medicamentos.ToList<Medicamento>().FindAll(fa =>
+                                                                       fa.Nome.ToLower().Contains(TexBoxSearch.Text.ToLower())));
+                Lista1.ItemsSource = lista;
+            }
+            else
+            {
+                Lista1.ItemsSource = MainWindow.Medicamentos;
+            }
+        }
     }
 }

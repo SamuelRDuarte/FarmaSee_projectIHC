@@ -7,10 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Order" Height="700" Width="414">
-    <Page.Resources>
-        
-        <materialDesign:PackIcon Kind="ShoppingCartMinus" x:Key="Remove"></materialDesign:PackIcon>
-    </Page.Resources>
+    
     <Grid Margin="10,0,10,10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" MaxHeight="130" MinHeight="128.8" />
@@ -202,6 +199,6 @@
 
         <Button Content="Payment" Foreground="MediumBlue"   Style="{StaticResource PaymentButtonsStyle2}" Margin="90,508,90,18" Grid.Row="1" Width="Auto" Click="ButtonPayment_Click"/>
 
-        <!--<ListBox Name="Histórico" Grid.Row="1" Background="Transparent"/>-->
+        
     </Grid>
 </Page>
