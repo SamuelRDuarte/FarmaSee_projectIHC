@@ -84,11 +84,11 @@ namespace FarmaSee
         {
             if(key_input.Text == "" || key_input.Text == "Key...")
             {
-                MessageBox.Show("Insert medical prescription code", "Erro", MessageBoxButton.OK);
+                MessageBox.Show("Insert medical prescription code", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if(key_input.Text != "1234")
             {
-                MessageBox.Show("Insert a valid medical prescription code", "Erro", MessageBoxButton.OK);
+                MessageBox.Show("Insert a valid medical prescription code", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {

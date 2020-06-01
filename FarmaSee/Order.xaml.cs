@@ -61,10 +61,10 @@ namespace FarmaSee
         {
             if(selectFarmacia.Content == null && MainWindow.ShopList.Count > 0)
             {
-                MessageBox.Show("Select a pharmacy", "Error", MessageBoxButton.OK);
+                MessageBox.Show("Select a pharmacy", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            if (MainWindow.ShopList.Count <= 0)
-                MessageBox.Show("Shopping cart empty", "Error", MessageBoxButton.OK);
+            else if (MainWindow.ShopList.Count <= 0)
+                MessageBox.Show("Shopping cart empty", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             else
             {
                 this.NavigationService.Navigate(new Payment());
@@ -79,12 +79,12 @@ namespace FarmaSee
             if (temp != null)
             {
                 MainWindow.ShopList.Remove(temp);
-                (((Button)sender).FindName("icon") as PackIcon).Kind = PackIconKind.ShoppingCartArrowDown;
+                (((Button)sender).FindName("icon") as PackIcon).Kind = PackIconKind.ShoppingCartOff;
             }
             else
             {
                 MainWindow.ShopList.Add(MainWindow.Medicamentos.ToList().Find(x => x.Nome == med));
-                (((Button)sender).FindName("icon") as PackIcon).Kind = PackIconKind.ShoppingCartArrowUp;
+                (((Button)sender).FindName("icon") as PackIcon).Kind = PackIconKind.ShoppingCart;
             }
         }
 

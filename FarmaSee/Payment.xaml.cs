@@ -35,12 +35,15 @@ namespace FarmaSee
         {
             if (((bool)pickupBt.IsChecked || (bool)atHomeBt.IsChecked) && ((bool)mbWay.IsChecked || (bool)atDelivery.IsChecked))
             {
-                Order order = new Order();
-                this.NavigationService.Navigate(order);
+                //Order order = new Order();
+                //this.NavigationService.Navigate(order);
+                MessageBox.Show("Order made", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                this.NavigationService.Navigate(new Home());
+                MainWindow.ShopList.Clear();
             }
             else
             {
-                MessageBox.Show("Select a type of payment and delivery", "Error", MessageBoxButton.OK);
+                MessageBox.Show("Select a type of payment and delivery", "Error", MessageBoxButton.OK,MessageBoxImage.Error);
             }
         }
 
@@ -67,7 +70,7 @@ namespace FarmaSee
             }
             else
             {
-                MessageBox.Show("Quantity can't be less than 1", "Error");
+                MessageBox.Show("Quantity can't be less than 1", "Error",MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
         }

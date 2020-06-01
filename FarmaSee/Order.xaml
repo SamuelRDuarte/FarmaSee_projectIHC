@@ -48,7 +48,7 @@
                                 <TextBlock Text="{Binding Path=Nome}" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Wheat" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="170"/>
                                 <Image Source="{Binding Path=Imagem}" Stretch="Fill" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="77" Grid.Column="1" Margin="24,10,13.787,5.4"/>
                                 <Button Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="ButtonAddShp_Click" Tag="{Binding Path=Nome}">
-                                    <materialDesign:PackIcon Kind="ShoppingCartArrowDown" Name="icon"></materialDesign:PackIcon>
+                                    <materialDesign:PackIcon Kind="ShoppingCart" Name="icon"></materialDesign:PackIcon>
                                 </Button>
                             </Grid>
 
@@ -112,7 +112,7 @@
                                 <TextBlock Text="{Binding Path=Nome}" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Wheat" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="170"/>
                                 <Image Source="{Binding Path=Imagem}" Stretch="Fill" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="77" Grid.Column="1" Margin="24,10,13.787,5.4"/>
                                 <Button Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="ButtonAddShp_Click" Tag="{Binding Path=Nome}">
-                                    <materialDesign:PackIcon Kind="ShoppingCartArrowDown" Name="icon"></materialDesign:PackIcon>
+                                    <materialDesign:PackIcon Kind="ShoppingCart" Name="icon"></materialDesign:PackIcon>
                                 </Button>
                             </Grid>
 

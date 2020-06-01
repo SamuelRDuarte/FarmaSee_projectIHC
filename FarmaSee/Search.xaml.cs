@@ -78,7 +78,7 @@ namespace FarmaSee
                 order.selectFarmacia.Content = far.Nome;
             }
             else
-                MessageBox.Show("Selecione uma farmacia", "Erro", MessageBoxButton.OK);
+                MessageBox.Show("Selecione uma farmacia", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
         }
         
         public void On_Click2()
@@ -92,7 +92,7 @@ namespace FarmaSee
                 order.selectFarmacia.Content = far.Nome;
             }
             else
-                MessageBox.Show("Selecione uma farmacia", "Erro", MessageBoxButton.OK);
+                MessageBox.Show("Selecione uma farmacia", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
 
