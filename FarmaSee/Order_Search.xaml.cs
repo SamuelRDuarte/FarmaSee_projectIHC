@@ -41,7 +41,7 @@ namespace FarmaSee
 
         private void ButtonPharmacy_Click(object sender, RoutedEventArgs e)
         {
-            Search sear = new Search(3,_pesquisa);
+            Search sear = new Search(0,_pesquisa);
             this.NavigationService.Navigate(sear);
         }
 

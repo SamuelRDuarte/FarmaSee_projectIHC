@@ -24,7 +24,7 @@
 
             <StackPanel Grid.Row="0" Background="#196289" Margin="0,0,0,10">
                 <Label Content="Purchase List" HorizontalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" />
-                <ListBox x:Name="Medicines" Background="Transparent" Height="275">
+                <ListBox x:Name="Medicines" Background="Transparent" Height="146">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Style="{StaticResource ListItemStyle}" Width="400">
@@ -39,13 +39,18 @@
                                     <StackPanel Grid.Column="0">
                                         <Label Content="{Binding Path=Nome}" Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black" Margin="0,13"></Label>
                                     </StackPanel>
-                                    <Label Name="quantityLabel" Content="{Binding Path=Quantidade}" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
+                                    <Label Grid.Column="3" Content="{Binding Path=Price}" Margin="0,0,5,0" FontWeight="DemiBold" FontSize="17" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
+                                    <Label Name="quantityLabel" Content="{Binding Path=Quantidade}" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
                                     <materialDesign:PackIcon Kind="RemoveCircle" ToolTip="Remove Medicine from Purchase List" MouseUp="PackIcon_MouseUp" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
                                 </Grid>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
+                <StackPanel Orientation="Horizontal" Height="65">
+                    <Label Content="Total Price: " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20"  Width="110" Margin="0,14"/>
+                    <Label Content="6€" Name="PrecoTotal" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Wheat" FontWeight="DemiBold" FontSize="20"  Width="110" Margin="0,14"/>
+                </StackPanel>
             </StackPanel>
 
             <StackPanel Grid.Row="2" Background="#196289" Margin="0,0,0,10">

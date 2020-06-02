@@ -22,6 +22,7 @@ namespace FarmaSee
         private string _nome;
         private int _quantidade;
         private string _imagem;
+        private string _price;
 
         public string Nome
         {
@@ -40,14 +41,20 @@ namespace FarmaSee
             get { return _imagem; }
             set { _imagem = value; }
         }
+
+        public string Price
+        {
+            get { return _price; }
+            set { _price = value; }
+        } 
     }
 
     public class Prescription : ObservableCollection<Medicamento>
     {
         public Prescription()
         {
-            Add(new Medicamento { Nome = "Lisinopril 5 mg", Quantidade = 2 });
-            Add(new Medicamento { Nome = "Ferro-Tardyferon 80mg", Quantidade = 1 });
+            Add(new Medicamento { Nome = "Lisinopril 5 mg", Quantidade = 2, Price= "4€" });
+            Add(new Medicamento { Nome = "Ferro-Tardyferon 80mg", Quantidade = 1, Price = "2€" });
 
         }
     }
@@ -64,10 +71,12 @@ namespace FarmaSee
             {
                 _pres = new Prescription();
                 MainWindow.Prescricao = _pres;
+                MainWindow.TotalPrescrição = 6;
             }
             else
             {
                 _pres = MainWindow.Prescricao;
+                PrecoTotal.Content = MainWindow.TotalPrescrição.ToString() + "€";
             }
             Medicines.ItemsSource = _pres;
         }
@@ -105,6 +114,10 @@ namespace FarmaSee
 
         private void PackIcon_MouseUp(object sender, MouseButtonEventArgs e)
         {
+            Medicamento med = MainWindow.Prescricao.ElementAt(Medicines.SelectedIndex);
+            int i = Int32.Parse(med.Price.Trim('€'));
+            MainWindow.TotalPrescrição = MainWindow.TotalPrescrição - i;
+            PrecoTotal.Content = MainWindow.TotalPrescrição.ToString() + "€";
             MainWindow.Prescricao.RemoveAt(Medicines.SelectedIndex);
         }
 

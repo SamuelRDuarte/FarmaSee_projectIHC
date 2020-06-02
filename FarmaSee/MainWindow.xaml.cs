@@ -28,6 +28,7 @@ namespace FarmaSee
         private static Prescription _prescricao;
         private static ListMedicamento _medicamentos;
         private static ObservableCollection<Medicamento> _shopList = new ObservableCollection<Medicamento>();
+        private static int _totalPrescricao;
 
         public MainWindow()
         {
@@ -70,6 +71,12 @@ namespace FarmaSee
         public static ObservableCollection<Medicamento> ShopList
         {
             get { return _shopList; }
+        }
+
+        public static int TotalPrescrição
+        {
+            get { return _totalPrescricao; }
+            set { _totalPrescricao = value; }
         }
     }
 }

@@ -43,14 +43,16 @@
                         <StackPanel Orientation="Horizontal" Width="323" Height="60">
                             <Grid HorizontalAlignment="Stretch" Width="323">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="180"/>
-                                    <ColumnDefinition Width="114.787"/>
+                                    <ColumnDefinition Width="130"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="110"/>
                                     <ColumnDefinition Width="28.413"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Text="{Binding Path=Nome}" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Wheat" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="170"/>
-                                <Image Source="{Binding Path=Imagem}" Stretch="Fill" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="77" Grid.Column="1" Margin="24,10,13.787,5.4"/>
-                                <Button Grid.Column="2"  VerticalAlignment="Center" ToolTip="Add to Cart" HorizontalAlignment="Center" Click="ButtonAddShp_Click" Tag="{Binding Path=Nome}">
-                                    <materialDesign:PackIcon Kind="ShoppingCart"  x:Name="icon"></materialDesign:PackIcon>
+                                <Label Grid.Column="1" Content="{Binding Path=Price}" Margin="10,0,0,0" FontSize="17" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
+                                <TextBlock Text="{Binding Path=Nome}" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Wheat" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="135"/>
+                                <Image Source="{Binding Path=Imagem}" Stretch="Fill" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="77" Grid.Column="2" Margin="24,10,13.787,5.4"/>
+                                <Button Grid.Column="3"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="ButtonAddShp_Click" ToolTip="Add to Cart" Tag="{Binding Path=Nome}">
+                                    <materialDesign:PackIcon Kind="ShoppingCart" Name="icon"></materialDesign:PackIcon>
                                 </Button>
                             </Grid>
 
@@ -77,13 +79,15 @@
                         <StackPanel Orientation="Horizontal" Width="323" Height="60">
                             <Grid HorizontalAlignment="Stretch" Width="323">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="180"/>
-                                    <ColumnDefinition Width="114.787"/>
+                                    <ColumnDefinition Width="130"/>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="110"/>
                                     <ColumnDefinition Width="28.413"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Text="{Binding Path=Nome}" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Wheat" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="170"/>
-                                <Image Source="{Binding Path=Imagem}" Stretch="Fill" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="77" Grid.Column="1" Margin="24,10,13.787,5.4"/>
-                                <Button Grid.Column="2"  VerticalAlignment="Center" ToolTip="Add to Cart" HorizontalAlignment="Center" Click="ButtonAddShp_Click" Tag="{Binding Path=Nome}">
+                                <Label Grid.Column="1" Content="{Binding Path=Price}" Margin="10,0,0,0" FontSize="17" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
+                                <TextBlock Text="{Binding Path=Nome}" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Wheat" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="135"/>
+                                <Image Source="{Binding Path=Imagem}" Stretch="Fill" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="77" Grid.Column="2" Margin="24,10,13.787,5.4"/>
+                                <Button Grid.Column="3"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="ButtonAddShp_Click" ToolTip="Add to Cart" Tag="{Binding Path=Nome}">
                                     <materialDesign:PackIcon Kind="ShoppingCart" Name="icon"></materialDesign:PackIcon>
                                 </Button>
                             </Grid>

@@ -20,13 +20,14 @@
 
             <StackPanel Grid.Row="0" Background="#196289" Margin="0,0,0,10">
                 <Label Content="Purchase List" HorizontalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" />
-                <ListBox x:Name="Medicines" Background="Transparent" Height="275">
+                <ListBox x:Name="Medicines" Background="Transparent" Height="186">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Style="{StaticResource ListItemStyle}" Width="400">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="260"/>
+                                        <ColumnDefinition Width="220"/>
+                                        <ColumnDefinition Width="33"/>
                                         <ColumnDefinition Width="33"/>
                                         <ColumnDefinition Width="33"/>
                                         <ColumnDefinition Width="33"/>
@@ -35,17 +36,22 @@
                                     <StackPanel Grid.Column="0">
                                         <Label Style="{StaticResource FarmaciaLabelStyle}" Content="{Binding Path=Nome}" Foreground="Black"></Label>
                                     </StackPanel>
-                                    <Button Name="plusButton" Tag="{Binding Path=Nome}" Content="+" Grid.Column="3" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
-                                    <Label Name="quantityLabel" Content="{Binding Path=Quantidade}" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
-                                    <Button Name="minusButton" Tag="{Binding Path=Nome}" Content="-" Grid.Column="1" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
-                                    <Button Grid.Column="4" Background="Transparent" BorderThickness="0" Tag="{Binding Path=Nome}" Click="ButtonDelete_Click" ToolTip="Remove Medicine from Purchase List" Margin="0,0,0,0">
-                                        <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
+                                    <Label Grid.Column="1" Content="{Binding Path=Price}" Margin="-10,0,0,0" FontWeight="DemiBold" FontSize="17" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ></Label>
+                                    <Button Name="plusButton" Tag="{Binding Path=Nome}" Content="+" Grid.Column="4" Style="{StaticResource QuantityButtonStyle}" Click="plus_click"/>
+                                    <Label Name="quantityLabel" Content="{Binding Path=Quantidade}" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
+                                    <Button Name="minusButton" Tag="{Binding Path=Nome}" Content="-" Grid.Column="2" Style="{StaticResource QuantityButtonStyle}" Click="minus_click"/>
+                                    <Button Grid.Column="5" Background="Transparent" BorderThickness="0" Tag="{Binding Path=Nome}" Click="ButtonDelete_Click" ToolTip="Remove Medicine from Purchase List" Margin="0,0,0,0">
+                                        <materialDesign:PackIcon Kind="RemoveCircle" Foreground="Red" Grid.Column="5" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
                                     </Button>
                                 </Grid>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
+                <StackPanel Orientation="Horizontal" Height="65">
+                    <Label Content="Total Price: " HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20"  Width="110" Margin="0,14"/>
+                    <Label Content="6€" Name="PrecoTotal" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="Wheat" FontWeight="DemiBold" FontSize="20"  Width="110" Margin="0,14"/>
+                </StackPanel>
             </StackPanel>
 
             <StackPanel Grid.Row="1" Background="#196289" Margin="0,0,0,10">

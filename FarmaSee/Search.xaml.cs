@@ -118,9 +118,10 @@ namespace FarmaSee
             if (_state == 1)
                 On_Click2();
             else if (_state == 0)
-                On_Click();
-            else
                 On_Click3();
+            else
+                On_Click();
+           
         }
 
         private void searchTextBox_GotFocus(object sender, RoutedEventArgs e)

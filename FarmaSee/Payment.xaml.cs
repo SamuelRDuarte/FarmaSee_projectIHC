@@ -22,7 +22,10 @@ namespace FarmaSee
         public Payment()
         {
             InitializeComponent();
-            Medicines.ItemsSource = MainWindow.ShopList;
+            Medicines.ItemsSource = MainWindow.ShopList.OrderBy(x => x.Nome);
+            int total = 0;
+            MainWindow.ShopList.ToList<Medicamento>().ForEach(x => total += Int32.Parse(x.Price.Trim('€')));
+            PrecoTotal.Content = total.ToString() + "€";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -53,8 +56,12 @@ namespace FarmaSee
             Medicamento med = MainWindow.ShopList.ToList().Find(x => x.Nome == nome);
             MainWindow.ShopList.Remove(med);
             med.Quantidade++;
+            med.Price = (2 * med.Quantidade).ToString() + "€";
             MainWindow.ShopList.Add(med);
-            Medicines.ItemsSource = MainWindow.ShopList;
+            Medicines.ItemsSource = MainWindow.ShopList.OrderBy(x => x.Nome);
+            int total = 0;
+            MainWindow.ShopList.ToList<Medicamento>().ForEach(x => total += Int32.Parse(x.Price.Trim('€')));
+            PrecoTotal.Content = total.ToString() + "€";
         }
 
         private void minus_click(object sender, RoutedEventArgs e)
@@ -65,8 +72,12 @@ namespace FarmaSee
             {
                 MainWindow.ShopList.Remove(med);
                 med.Quantidade--;
+                med.Price = (2 * med.Quantidade).ToString() + "€";
                 MainWindow.ShopList.Add(med);
-                Medicines.ItemsSource = MainWindow.ShopList;
+                Medicines.ItemsSource = MainWindow.ShopList.OrderBy(x=>x.Nome);
+                int total = 0;
+                MainWindow.ShopList.ToList<Medicamento>().ForEach(x => total += Int32.Parse(x.Price.Trim('€')));
+                PrecoTotal.Content = total.ToString() + "€";
             }
             else
             {
@@ -80,6 +91,9 @@ namespace FarmaSee
             string nome = ((Button)sender).Tag.ToString();
             MainWindow.ShopList.Remove(MainWindow.ShopList.ToList().Find(x => x.Nome == nome));
             Medicines.ItemsSource = MainWindow.ShopList;
+            int total = 0;
+            MainWindow.ShopList.ToList<Medicamento>().ForEach(x => total += Int32.Parse(x.Price.Trim('€')));
+            PrecoTotal.Content = total.ToString() + "€";
         }
     }
 }
