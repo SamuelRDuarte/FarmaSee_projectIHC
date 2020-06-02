@@ -54,10 +54,13 @@ namespace FarmaSee
     /// </summary>
     public partial class Search : Page
     {
-        private bool _order;
-        public Search(bool x)
+        private int _state;
+        private string _pesquisa;
+
+        public Search(int x, string pesquisa =null)
         {
-            _order = x;
+            _state = x;
+            _pesquisa = pesquisa;
             InitializeComponent();
             FarmaciasListBox.ItemsSource = MainWindow.Farmacias;
         }
@@ -95,13 +98,29 @@ namespace FarmaSee
                 MessageBox.Show("Selecione uma farmacia", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
+        public void On_Click3()
+        {
+
+            if (FarmaciasListBox.SelectedValue != null)
+            {
+                Order_Search order = new Order_Search(_pesquisa);
+                this.NavigationService.Navigate(order);
+                Farmacia far = (Farmacia)FarmaciasListBox.SelectedValue;
+                order.selectFarmacia.Content = far.Nome;
+            }
+            else
+                MessageBox.Show("Selecione uma farmacia", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+        }
+
 
         private void ListBoxItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (_order)
+            if (_state == 1)
+                On_Click2();
+            else if (_state == 0)
                 On_Click();
             else
-                On_Click2();
+                On_Click3();
         }
 
         private void searchTextBox_GotFocus(object sender, RoutedEventArgs e)

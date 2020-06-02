@@ -53,7 +53,7 @@ namespace FarmaSee
 
         private void ButtonPharmacy_Click(object sender, RoutedEventArgs e)
         {
-            Search sear = new Search(true);
+            Search sear = new Search(3);
             this.NavigationService.Navigate(sear);
         }
 
@@ -79,12 +79,12 @@ namespace FarmaSee
             if (temp != null)
             {
                 MainWindow.ShopList.Remove(temp);
-                (((Button)sender).FindName("icon") as PackIcon).Kind = PackIconKind.ShoppingCartOff;
+                (((Button)sender).FindName("icon") as PackIcon).Kind = PackIconKind.ShoppingCart;
             }
             else
             {
                 MainWindow.ShopList.Add(MainWindow.Medicamentos.ToList().Find(x => x.Nome == med));
-                (((Button)sender).FindName("icon") as PackIcon).Kind = PackIconKind.ShoppingCart;
+                (((Button)sender).FindName("icon") as PackIcon).Kind = PackIconKind.ShoppingCartOff;
             }
         }
 

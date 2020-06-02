@@ -22,8 +22,10 @@ namespace FarmaSee
     /// </summary>
     public partial class Order_Search : Page
     {
+        private string _pesquisa;
         public Order_Search(string pesquisa)
         {
+            _pesquisa = pesquisa;
             InitializeComponent();
             TexBoxSearch.Text = pesquisa;
             Lista.ItemsSource = new ObservableCollection<Medicamento>(MainWindow.Medicamentos.ToList().GetRange(0, 2));
@@ -39,7 +41,7 @@ namespace FarmaSee
 
         private void ButtonPharmacy_Click(object sender, RoutedEventArgs e)
         {
-            Search sear = new Search(true);
+            Search sear = new Search(3,_pesquisa);
             this.NavigationService.Navigate(sear);
         }
 
@@ -65,12 +67,12 @@ namespace FarmaSee
             if (temp != null)
             {
                 MainWindow.ShopList.Remove(temp);
-                (((Button)sender).FindName("icon") as PackIcon).Kind = PackIconKind.ShoppingCartOff;
+                (((Button)sender).FindName("icon") as PackIcon).Kind = PackIconKind.ShoppingCart;
             }
             else
             {
                 MainWindow.ShopList.Add(MainWindow.Medicamentos.ToList().Find(x => x.Nome == med));
-                (((Button)sender).FindName("icon") as PackIcon).Kind = PackIconKind.ShoppingCart;
+                (((Button)sender).FindName("icon") as PackIcon).Kind = PackIconKind.ShoppingCartOff;
             }
         }
 
@@ -99,5 +101,6 @@ namespace FarmaSee
                 Lista1.ItemsSource = MainWindow.Medicamentos;
             }
         }
-    }
+
+     }
 }

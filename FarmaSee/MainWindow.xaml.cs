@@ -27,7 +27,7 @@ namespace FarmaSee
         private static ListaHistorico _historico;
         private static Prescription _prescricao;
         private static ListMedicamento _medicamentos;
-        private static ObservableCollection<Medicamento> _shopList;
+        private static ObservableCollection<Medicamento> _shopList = new ObservableCollection<Medicamento>();
 
         public MainWindow()
         {
@@ -36,7 +36,6 @@ namespace FarmaSee
             _historico = new ListaHistorico();
             _prescricao = new Prescription();
             _medicamentos = new ListMedicamento();
-            _shopList = new ObservableCollection<Medicamento>();
         }
 
         public static ListaFarmacias Farmacias
