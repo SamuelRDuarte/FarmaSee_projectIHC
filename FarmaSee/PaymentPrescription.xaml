@@ -40,7 +40,7 @@
                                         <Label Content="{Binding Path=Nome}" Style="{StaticResource FarmaciaLabelStyle}" Foreground="Black" Margin="0,13"></Label>
                                     </StackPanel>
                                     <Label Name="quantityLabel" Content="{Binding Path=Quantidade}" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Medium"></Label>
-                                    <materialDesign:PackIcon Kind="RemoveCircle" MouseUp="PackIcon_MouseUp" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
+                                    <materialDesign:PackIcon Kind="RemoveCircle" ToolTip="Remove Medicine from Purchase List" MouseUp="PackIcon_MouseUp" Foreground="Red" Grid.Column="4" Width="23" Height="28" VerticalAlignment="Center" Margin="1,2,0,1"/>
                                 </Grid>
                             </StackPanel>
                         </DataTemplate>
@@ -84,7 +84,7 @@
                 </Grid>
                 <Label Content="Select pharmacy" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" Margin="10,0,0,20" Width="160"/>
 
-                <Button x:Name="ButtonOpenMenu" HorizontalAlignment="Right" Width="30" Height="30" Background="{x:Null}" Margin="0,-70,12,0" BorderBrush="{x:Null}" VerticalAlignment="Center" Click="ButtonPharmacy_Click">
+                <Button x:Name="ButtonOpenMenu" ToolTip="Select Pharmacy" HorizontalAlignment="Right" Width="30" Height="30" Background="{x:Null}" Margin="0,-70,12,0" BorderBrush="{x:Null}" VerticalAlignment="Center" Click="ButtonPharmacy_Click">
                     <materialDesign:PackIcon Foreground="#A7A7A7" Kind="Pharmacy" Height="22" Width="23"/>
                 </Button>
             </StackPanel>
@@ -96,8 +96,8 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="Cancel" Foreground="Red" Style="{StaticResource PaymentButtonsStyle2}" Click="Button_Click"></Button>
-            <Button Grid.Column="1" Content="Order" Foreground="Blue"  Style="{StaticResource PaymentButtonsStyle2}" Click="Button_Click_1"></Button>
+            <Button Grid.Column="0" Content="Cancel" Foreground="Red" Style="{StaticResource PaymentButtonsStyle2}" ToolTip="Cancel Order" Click="Button_Click"></Button>
+            <Button Grid.Column="1" Content="Order" Foreground="Blue"  Style="{StaticResource PaymentButtonsStyle2}" ToolTip="Place Order" Click="Button_Click_1"></Button>
         </Grid>
     </Grid>
 </Page>

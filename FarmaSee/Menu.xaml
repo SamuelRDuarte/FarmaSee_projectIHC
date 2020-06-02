@@ -15,7 +15,7 @@
         <Rectangle Fill="#F9F9F9" Height="87" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
 
         <Label Content="Menu" Style="{StaticResource TitulolabelStyle}" Margin="162,10,162,0" />
-        <Image Source="back_icon.png" Margin="10,10,350,365" MouseUp="Image_MouseUp"/>
+        <Image Source="back_icon.png" Margin="10,10,350,365" ToolTip="Go back" MouseUp="Image_MouseUp"/>
 
         <StackPanel Margin="0,94,0,0" Grid.RowSpan="2">
             <Button Style="{StaticResource MenuButtons}" Click="ButtonHome_Click">

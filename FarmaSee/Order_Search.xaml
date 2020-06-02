@@ -49,7 +49,7 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="{Binding Path=Nome}" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Wheat" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="170"/>
                                 <Image Source="{Binding Path=Imagem}" Stretch="Fill" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="77" Grid.Column="1" Margin="24,10,13.787,5.4"/>
-                                <Button Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="ButtonAddShp_Click" Tag="{Binding Path=Nome}">
+                                <Button Grid.Column="2"  VerticalAlignment="Center" ToolTip="Add to Cart" HorizontalAlignment="Center" Click="ButtonAddShp_Click" Tag="{Binding Path=Nome}">
                                     <materialDesign:PackIcon Kind="ShoppingCart"  x:Name="icon"></materialDesign:PackIcon>
                                 </Button>
                             </Grid>
@@ -83,7 +83,7 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="{Binding Path=Nome}" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Wheat" Margin="0,15,0,15.4" FontSize="16" Height="25" Width="170"/>
                                 <Image Source="{Binding Path=Imagem}" Stretch="Fill" Height="31" HorizontalAlignment="Center" VerticalAlignment="Center"  Width="77" Grid.Column="1" Margin="24,10,13.787,5.4"/>
-                                <Button Grid.Column="2"  VerticalAlignment="Center" HorizontalAlignment="Center" Click="ButtonAddShp_Click" Tag="{Binding Path=Nome}">
+                                <Button Grid.Column="2"  VerticalAlignment="Center" ToolTip="Add to Cart" HorizontalAlignment="Center" Click="ButtonAddShp_Click" Tag="{Binding Path=Nome}">
                                     <materialDesign:PackIcon Kind="ShoppingCart" Name="icon"></materialDesign:PackIcon>
                                 </Button>
                             </Grid>
@@ -104,13 +104,13 @@
 
             <Label Content="Select pharmacy" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="White" FontWeight="DemiBold" FontSize="20" Margin="10,0,0,20" Width="160"/>
 
-            <Button x:Name="ButtonOpenMenu" HorizontalAlignment="Right" Width="30" Height="30" Background="{x:Null}" Margin="0,-70,12,0" BorderBrush="{x:Null}" VerticalAlignment="Center" Click="ButtonPharmacy_Click">
+            <Button x:Name="ButtonOpenMenu" ToolTip="Select Pharmacy" HorizontalAlignment="Right" Width="30" Height="30" Background="{x:Null}" Margin="0,-70,12,0" BorderBrush="{x:Null}" VerticalAlignment="Center" Click="ButtonPharmacy_Click">
                 <materialDesign:PackIcon Foreground="#A7A7A7" Kind="Pharmacy" Height="22" Width="23"/>
             </Button>
         </StackPanel>
         <Label Name="selectFarmacia" FontSize="17" FontWeight="DemiBold" Foreground="Wheat" Margin="13,461,14,70" Grid.Row="1"/>
 
-        <Button Content="Payment" Foreground="MediumBlue"   Style="{StaticResource PaymentButtonsStyle2}" Margin="90,508,90,18" Grid.Row="1" Width="Auto" Click="ButtonPayment_Click"/>
+        <Button Content="Payment" Foreground="MediumBlue" ToolTip="Advance to Payment" Style="{StaticResource PaymentButtonsStyle2}" Margin="90,508,90,18" Grid.Row="1" Width="Auto" Click="ButtonPayment_Click"/>
 
     </Grid>
 </Page>

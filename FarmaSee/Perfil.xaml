@@ -22,7 +22,8 @@
         <Rectangle Fill="#F9F9F9"   Height="74" Margin="0,0,0,0" Stroke="Transparent" VerticalAlignment="Top"/>
 
         <Label Content="Profile" Style="{StaticResource TitulolabelStyle}" Margin="155,10,155,0" Height="50" HorizontalAlignment="Stretch" />
-        <Image Source="back_icon.png" Margin="10,10,350,243" MouseUp="Image_MouseUp"/>
+        <Image Source="menu.png" Stretch="Fill" MouseUp="Image_MouseUp" ToolTip="Open Menu" Margin="20,23,356.4,252.4" />
+        <!--<Image Source="back_icon.png" Margin="10,10,350,243" MouseUp="Image_MouseUp"/>-->
         <!--<Image Margin="114,68" Source="profile-avatar-png-15.png" Stretch="Fill"/>-->
         <materialDesign:PackIcon Kind="PersonCircle" Width="Auto" Height="146" VerticalAlignment="Bottom" Margin="126,0,126,64" Foreground="#D3D3D3" HorizontalAlignment="Stretch"/>
         <Label Content="Username" Foreground="White" FontSize="20" FontWeight="DemiBold" Margin="157,256,155.4,14.4" RenderTransformOrigin="0.515,0.472"/>

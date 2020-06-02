@@ -76,7 +76,7 @@
                 <materialDesign:PackIcon Kind="Search" Width="25" Height="25" VerticalAlignment="Center" Margin="0,1,0,0.4" Foreground="#A7A7A7" MouseUp="enterPrescription"/>
             </Grid>
         </Button>
-        <Image Source="menu.png" Grid.Column="0" Margin="20,44,345.4,658"  Stretch="Fill" MouseUp="Image_MouseUp" />
+        <Image Source="menu.png" Grid.Column="0" Margin="20,44,345.4,658" ToolTip="Open Menu" Stretch="Fill" MouseUp="Image_MouseUp" />
 
     </Grid>
 
