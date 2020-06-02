@@ -32,13 +32,13 @@
 
         <!--<Label Content="Search what you need" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="94,147,89,0" VerticalAlignment="Top" Width="211" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>-->
         <Label Content="Search what you need" Style="{StaticResource HomeTitulolabelStyle}" Margin="82,152,100.4,541" Width="212"></Label>
-        <TextBox Name="search_textbox" Template="{StaticResource SearchBoxTemplate}" BorderThickness="2,2,2,2" HorizontalAlignment="Center" Height="35" TextWrapping="Wrap" Text=" Search.." FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="309" Margin="36,190,49,0" Background="#00517C" Foreground="#A7A7A7" GotFocus="searchTextBox_GotFocus" />
+        <TextBox Name="search_textbox" KeyUp="search_textbox_KeyUp" Template="{StaticResource SearchBoxTemplate}" BorderThickness="2,2,2,2" HorizontalAlignment="Center" Height="35" TextWrapping="Wrap" Text=" Search.." FontSize="18" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="309" Margin="36,190,49,0" Background="#00517C" Foreground="#A7A7A7" GotFocus="searchTextBox_GotFocus" />
 
         <!--<Label Content="OR" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="170,249,164,0" VerticalAlignment="Top" Width="60" FontSize="19" FontWeight="Bold" Foreground="#A7A7A7" RenderTransformOrigin="0.562,0.2" Height="35"/>-->
 
         <!--<Label Content="Insert medical prescription code:" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="60,308,49,0" VerticalAlignment="Top" Width="285" FontSize="19" Foreground="#D3D3D3"   RenderTransformOrigin="0.562,0.2" Height="33"/>-->
         <Label Content="Insert medical prescription code:" Style="{StaticResource HomeTitulolabelStyle}" Margin="46,315,24.4,375" Width="324"/>
-        <TextBox Name="key_input" Template="{StaticResource ResourceKey=SearchBoxTemplate}" HorizontalAlignment="Center" BorderThickness="2,2,2,2" Height="35" TextWrapping="Wrap" Text=" Key..." FontSize="18" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="261" Margin="70,356,63,0" Background="#00517C" Foreground="#A7A7A7" GotFocus="keyTextBox_GotFocus" />
+        <TextBox Name="key_input" KeyUp="key_input_KeyUp" Template="{StaticResource ResourceKey=SearchBoxTemplate}" HorizontalAlignment="Center" BorderThickness="2,2,2,2" Height="35" TextWrapping="Wrap" Text=" Key..." FontSize="18" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="261" Margin="70,356,63,0" Background="#00517C" Foreground="#A7A7A7" GotFocus="keyTextBox_GotFocus" />
 
         <Label Content="Pending Deliveries:" Style="{StaticResource HomeTitulolabelStyle}" Margin="104,479,107.4,201" Width="183"/>
         <Border BorderBrush="#60973D" BorderThickness="0,0,0,5" HorizontalAlignment="Center" Height="2" Margin="86,517,88.4,0" VerticalAlignment="Top" Width="220" />

@@ -27,7 +27,7 @@
 
         <Label Content="Please select a farmacy." Margin="10,118,270,593" Foreground="White"/>
 
-        <ListBox x:Name="FarmaciasListBox" BorderThickness="0" MouseDoubleClick="ListBoxItem_MouseDoubleClick"  Background="Transparent" Margin="0,148,0,0.4" >
+        <ListBox x:Name="FarmaciasListBox" BorderThickness="0" MouseUp="ListBoxItem_MouseDoubleClick"  Background="Transparent" Margin="0,148,0,0.4" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Style="{StaticResource SearchItemStyle}" Width="412">

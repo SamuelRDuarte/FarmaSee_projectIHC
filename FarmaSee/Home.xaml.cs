@@ -66,9 +66,9 @@ namespace FarmaSee
             this.NavigationService.Navigate(new Login());
         }
 
-        private void ButtonSearch_Click(object sender, RoutedEventArgs e)
+        private void Search_Click()
         {
-            if(search_textbox.Text == "" || search_textbox.Text == " Search..")
+            if (search_textbox.Text == "" || search_textbox.Text == " Search..")
             {
                 Order order = new Order();
                 this.NavigationService.Navigate(order);
@@ -78,16 +78,20 @@ namespace FarmaSee
                 Order_Search order = new Order_Search(search_textbox.Text);
                 this.NavigationService.Navigate(order);
             }
-            
         }
 
-        private void ButtonKeySearch_Click(object sender, RoutedEventArgs e)
+        private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
-            if(key_input.Text == "" || key_input.Text == "Key...")
+            Search_Click();
+        }
+
+        private void SearchKey_Click()
+        {
+            if (key_input.Text == "" || key_input.Text == "Key...")
             {
                 MessageBox.Show("Insert medical prescription code", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-            else if(key_input.Text != "1234")
+            else if (key_input.Text != "1234")
             {
                 MessageBox.Show("Insert a valid medical prescription code", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -96,6 +100,11 @@ namespace FarmaSee
                 PaymentPrescription payment = new PaymentPrescription(true);
                 this.NavigationService.Navigate(payment);
             }
+        }
+
+        private void ButtonKeySearch_Click(object sender, RoutedEventArgs e)
+        {
+            SearchKey_Click();
             
         }
 
@@ -125,6 +134,20 @@ namespace FarmaSee
             key_input.Text = "Key...";
         }
 
-        
+        private void search_textbox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if(e.Key == System.Windows.Input.Key.Enter)
+            {
+                Search_Click();
+            }
+        }
+
+        private void key_input_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Enter)
+            {
+                SearchKey_Click();
+            }
+        }
     }
 }
